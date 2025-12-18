@@ -1,31 +1,44 @@
 {
-  "name": "rocket-shooter",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "description": "Rocket Shooter - Epic space shooter game on Base blockchain",
-  "author": "Dark-Brain07",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build && node scripts/copy-manifest.js",
-    "build:nocheck": "vite build --mode production && node scripts/copy-manifest.js",
-    "preview": "vite preview"
+  "accountAssociation": {
+    "header": "eyJmaWQiOjUzMjAxNywidHlwZSI6ImF1dGgiLCJrZXkiOiIweDQ5ZEIzNUUxOTc4NDBBNjkxMUJEZWJjZjNhQTZjMzg5Y2I3NTM0Y0QifQ",
+    "payload": "eyJkb21haW4iOiJyb2NrZXQtc2hvb3Rlci1zZXZlbi52ZXJjZWwuYXBwIn0",
+    "signature": "AAAAAAAAAAAAAAAAyhG94Fl3s2MRZwKIYr4qFzl2yhEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkSCrVbLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAul7REO_bo9AFv8iC11NYrLu4WEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVQ_-6NvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA2R5CPCIzscZ2Maha--4FRcDAmjFbVM5SwWrW0DsL4jVwpMJG-7eGqYoVmnNXFEZFYrxvPXwChhzXmmW0G_1dEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA8kQ2smlR0nxLd6JOINXLZtPTn4HhWwqMROytRWUz0BEOrSzgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEHARqWUjjwiJIWg84wcBXozklppE_1R91prutRgUEwpNC13G6aMlHw61_7n0NDNn3wf0ef1jlSxQJUUn0PKjOUPHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkkmSSZJJkkmSSZJJkkmSSZJJkkmSSZJJkkmSSZJJkkg"
   },
-  "dependencies": {
-    "ethers": "^5.7.2",
-    "lucide-react": "^0.263.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+
+  miniapp: {
+    version: "1",
+
+    name: "Rocket Shooter",
+    subtitle: "Play. Score. Save on Base.",
+    description:
+      "An epic arcade-style rocket shooter game where players battle enemies and save their high scores directly on the Base blockchain.",
+
+    homeUrl: "https://rocket-shooter-seven.vercel.app",
+    webhookUrl: "https://rocket-shooter-seven.vercel.app/api/webhook",
+
+    // Screenshots shown in Farcaster Mini App page
+    screenshotUrls: [
+      "https://rocket-shooter-seven.vercel.app/screenshots/screenshot-portrait.png"
+    ],
+
+    // App icon (REQUIRED)
+    iconUrl: "https://rocket-shooter-seven.vercel.app/icons/icon-512.png",
+
+    // Splash / hero images
+    splashImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
+    splashBackgroundColor: "#1e3a8a",
+    heroImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
+
+    // Discovery
+    primaryCategory: "games",
+    tags: ["game", "arcade", "base", "onchain", "farcaster"],
+
+    tagline: "Defend the skies. Go onchain.",
+
+    // Warpcast / OpenGraph embed
+    ogTitle: "🚀 Rocket Shooter on Base",
+    ogDescription:
+      "Play an onchain arcade shooter. Destroy enemies, earn high scores, and save them permanently on the Base blockchain.",
+    ogImageUrl: "https://rocket-shooter-seven.vercel.app/images/og.png"
   }
 }
