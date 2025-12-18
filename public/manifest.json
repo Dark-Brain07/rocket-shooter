@@ -1,0 +1,16 @@
+{
+  "name": "Rocket Shooter",
+  "short_name": "Rocket",
+  "description": "Epic space shooter game on Base blockchain",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

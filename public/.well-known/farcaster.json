@@ -1,0 +1,16 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjEyMzQ1LCJ0eXBlIjoiY3VzdG9keSIsImtleSI6IjB4MTIzNDU2Nzg5MGFiY2RlZjEyMzQ1Njc4OTBhYmNkZWYxMjM0NTY3OCJ9",
+    "payload": "eyJkb21haW4iOiJyb2NrZXQtc2hvb3Rlci52ZXJjZWwuYXBwIn0",
+    "signature": "MHg..."
+  },
+  "frame": {
+    "version": "next",
+    "name": "Rocket Shooter",
+    "homeUrl": "https://rocket-shooter.vercel.app",
+    "iconUrl": "https://rocket-shooter.vercel.app/icon.png",
+    "splashImageUrl": "https://rocket-shooter.vercel.app/splash.png",
+    "splashBackgroundColor": "#0f172a",
+    "webhookUrl": "https://rocket-shooter.vercel.app/api/webhook"
+  }
+}
