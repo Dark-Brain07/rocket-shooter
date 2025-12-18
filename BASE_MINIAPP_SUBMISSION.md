@@ -8,7 +8,7 @@
 
 ## 🔗 Links
 
-- **Live URL:** https://rocket-shooter.vercel.app
+- **Live URL:** https://rocket-shooter-seven.vercel.app/
 - **GitHub:** https://github.com/Dark-Brain07/rocket-shooter
 - **Contract:** 0x951634B88938D2Cdd72149dB57C198Ea835AAf20
 - **BaseScan:** https://basescan.org/address/0x951634B88938D2Cdd72149dB57C198Ea835AAf20

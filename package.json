@@ -3,15 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Rocket Shooter - Action game on Base blockchain",
+  "description": "Rocket Shooter - Epic space shooter game on Base blockchain",
   "author": "Dark-Brain07",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/copy-manifest.js",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@farcaster/frame-sdk": "^0.1.12",
     "ethers": "^5.7.2",
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",

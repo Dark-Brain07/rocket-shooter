@@ -10,5 +10,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false
-  }
+  },
+  publicDir: 'public',
+  // Copy app/.well-known to dist during build
+  assetsInclude: ['**/*.json']
 })
