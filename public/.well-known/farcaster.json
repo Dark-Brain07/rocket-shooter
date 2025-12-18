@@ -9,36 +9,26 @@
     version: "1",
 
     name: "Rocket Shooter",
-    subtitle: "Play. Score. Save on Base.",
-    description:
-      "An epic arcade-style rocket shooter game where players battle enemies and save their high scores directly on the Base blockchain.",
+    subtitle: "Epic space shooter game",
+    description: "Play, score, and save your high scores directly on the Base blockchain.",
+    tagline: "Defend the skies. Go onchain.",
 
     homeUrl: "https://rocket-shooter-seven.vercel.app",
-    webhookUrl: "https://rocket-shooter-seven.vercel.app/api/webhook",
+    iconUrl: "https://rocket-shooter-seven.vercel.app/icons/icon-512.png",
 
-    // Screenshots shown in Farcaster Mini App page
+    splashImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
+    splashBackgroundColor: "#1e3a8a",
+
+    primaryCategory: "games",
+    tags: ["game", "arcade", "base", "onchain", "farcaster"],
+
+    heroImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
     screenshotUrls: [
       "https://rocket-shooter-seven.vercel.app/screenshots/screenshot-portrait.png"
     ],
 
-    // App icon (REQUIRED)
-    iconUrl: "https://rocket-shooter-seven.vercel.app/icons/icon-512.png",
-
-    // Splash / hero images
-    splashImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
-    splashBackgroundColor: "#1e3a8a",
-    heroImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
-
-    // Discovery
-    primaryCategory: "games",
-    tags: ["game", "arcade", "base", "onchain", "farcaster"],
-
-    tagline: "Defend the skies. Go onchain.",
-
-    // Warpcast / OpenGraph embed
     ogTitle: "🚀 Rocket Shooter on Base",
-    ogDescription:
-      "Play an onchain arcade shooter. Destroy enemies, earn high scores, and save them permanently on the Base blockchain.",
+    ogDescription: "Epic arcade shooter where you destroy enemies and save high scores on Base blockchain.",
     ogImageUrl: "https://rocket-shooter-seven.vercel.app/images/og.png"
   }
 }
