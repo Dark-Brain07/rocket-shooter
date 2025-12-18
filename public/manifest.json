@@ -1,28 +1,17 @@
-import { ROOT_URL } from "./type-declarations";
-
-export const minikitConfig = {
-  "accountAssociation": {
-    "header": "eyJmaWQiOjUzMjAxNywidHlwZSI6ImF1dGgiLCJrZXkiOiIweDQ5ZEIzNUUxOTc4NDBBNjkxMUJEZWJjZjNhQTZjMzg5Y2I3NTM0Y0QifQ",
-    "payload": "eyJkb21haW4iOiJyb2NrZXQtc2hvb3Rlci1zZXZlbi52ZXJjZWwuYXBwIn0",
-    "signature": "AAAAAAAAAAAAAAAAyhG94Fl3s2MRZwKIYr4qFzl2yhEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkSCrVbLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAul7REO_bo9AFv8iC11NYrLu4WEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVQ_-6NvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA2R5CPCIzscZ2Maha--4FRcDAmjFbVM5SwWrW0DsL4jVwpMJG-7eGqYoVmnNXFEZFYrxvPXwChhzXmmW0G_1dEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA8kQ2smlR0nxLd6JOINXLZtPTn4HhWwqMROytRWUz0BEOrSzgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEHARqWUjjwiJIWg84wcBXozklppE_1R91prutRgUEwpNC13G6aMlHw61_7n0NDNn3wf0ef1jlSxQJUUn0PKjOUPHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkkmSSZJJkkmSSZJJkkmSSZJJkkmSSZJJkkmSSZJJkkg"
-  },
-  miniapp: {
-    version: "1",
-    name: "Rocket Shooter",
-    subtitle: "Play. Score. Save on Base.",
-    description: "Epic arcade-style rocket shooter on Base blockchain.",
-    homeUrl: ROOT_URL,
-    webhookUrl: `${ROOT_URL}/api/webhook`,
-    screenshotUrls: [`${ROOT_URL}/screenshots/screenshot-portrait.png`],
-    iconUrl: `${ROOT_URL}/icons/icon-512.png`,
-    splashImageUrl: `${ROOT_URL}/images/hero.png`,
-    splashBackgroundColor: "#1e3a8a",
-    heroImageUrl: `${ROOT_URL}/images/hero.png`,
-    primaryCategory: "games",
-    tags: ["game", "arcade", "base", "onchain", "farcaster"],
-    tagline: "Defend the skies. Go onchain.",
-    ogTitle: "🚀 Rocket Shooter on Base",
-    ogDescription: "Play an onchain arcade shooter. Destroy enemies, earn high scores, and save them on Base.",
-    ogImageUrl: `${ROOT_URL}/images/og.png`,
-  }
-} as const;
+{
+  "name": "Rocket Shooter",
+  "short_name": "Rocket",
+  "description": "Epic arcade-style rocket shooter game on Base blockchain",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1e3a8a",
+  "background_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
