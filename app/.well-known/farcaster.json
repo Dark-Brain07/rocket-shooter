@@ -7,33 +7,31 @@
   "frame": {
     "version": "1",
     "name": "Rocket Shooter",
-    "iconUrl": "https://rocket-shooter-seven.vercel.app/icon.png",
-    "splashImageUrl": "https://rocket-shooter-seven.vercel.app/splash.png",
+    "iconUrl": "https://rocket-shooter.vercel.app/icon.png",
+    "splashImageUrl": "https://rocket-shooter.vercel.app/splash.png",
     "splashBackgroundColor": "#0f172a",
-    "homeUrl": "https://rocket-shooter.vercel.app",
-    "webhookUrl": "https://rocket-shooter-seven.vercel.app/api/webhook"
+    "homeUrl": "https://rocket-shooter.vercel.app"
   },
   "miniapp": {
     "version": "1",
     "name": "Rocket Shooter",
     "subtitle": "Epic Space Battle Game",
-    "description": "Action-packed space shooter with blockchain leaderboard on Base Mainnet. Destroy enemy rockets and planes, avoid birds, and save your high scores on-chain!",
+    "description": "Action-packed space shooter with blockchain leaderboard on Base Mainnet. Destroy enemy rockets and planes, avoid birds, save your high scores on-chain!",
     "screenshotUrls": [
-      "hhttps://rocket-shooter-seven.vercel.app/screenshot-portrait.png",
-      "https://rocket-shooter-seven.vercel.app/screenshot-landscape.png",
-      "https://rocket-shooter-seven.vercel.app/screenshot-gameplay.png"
+      "https://rocket-shooter.vercel.app/screenshot-portrait.png",
+      "https://rocket-shooter.vercel.app/screenshot-landscape.png",
+      "https://rocket-shooter.vercel.app/screenshot-gameplay.png"
     ],
-    "iconUrl": "https://rocket-shooter-seven.vercel.app/icon.png",
-    "splashImageUrl": "https://rocket-shooter-seven.vercel.app/splash.png",
+    "iconUrl": "https://rocket-shooter.vercel.app/icon.png",
+    "splashImageUrl": "https://rocket-shooter.vercel.app/splash.png",
     "splashBackgroundColor": "#0f172a",
-    "homeUrl": "https://rocket-shooter-seven.vercel.app/",
-    "webhookUrl": "https://rocket-shooter-seven.vercel.app/api/webhook",
+    "homeUrl": "https://rocket-shooter.vercel.app",
     "primaryCategory": "games",
     "tags": ["gaming", "arcade", "blockchain", "web3", "base", "action", "shooter", "leaderboard"],
-    "heroImageUrl": "https://rocket-shooter-seven.vercel.app/hero-image.png",
+    "heroImageUrl": "https://rocket-shooter.vercel.app/hero-image.png",
     "tagline": "Defend the skies, dominate the leaderboard!",
     "ogTitle": "Rocket Shooter - Epic Space Battle on Base",
     "ogDescription": "Action-packed space shooter with blockchain scores. Destroy enemies, avoid birds, climb the leaderboard on Base Mainnet!",
-    "ogImageUrl": "https://rocket-shooter-seven.vercel.app/og-image.png"
+    "ogImageUrl": "https://rocket-shooter.vercel.app/og-image.png"
   }
 }

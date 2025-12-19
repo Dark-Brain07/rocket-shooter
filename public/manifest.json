@@ -1,6 +1,7 @@
 {
   "name": "Rocket Shooter",
   "short_name": "Rocket",
+<<<<<<< HEAD
   "description": "Epic arcade-style rocket shooter game on Base blockchain",
   "start_url": "/",
   "display": "standalone",
@@ -9,6 +10,17 @@
   "icons": [
     {
       "src": "/icons/icon-512.png",
+=======
+  "description": "Epic space shooter game on Base blockchain",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e3a8a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon.png",
+>>>>>>> bc0d7f6 (Add Base Mini App manifest with proper routing)
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
