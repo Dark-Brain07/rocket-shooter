@@ -1,29 +1,34 @@
 {
-  "name": "Rocket Shooter",
-  "short_name": "Rocket",
-<<<<<<< HEAD
-  "description": "Epic arcade-style rocket shooter game on Base blockchain",
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#1e3a8a",
-  "background_color": "#1e3a8a",
-  "icons": [
-    {
-      "src": "/icons/icon-512.png",
-=======
-  "description": "Epic space shooter game on Base blockchain",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#1e3a8a",
-  "orientation": "any",
-  "icons": [
-    {
-      "src": "/icon.png",
->>>>>>> bc0d7f6 (Add Base Mini App manifest with proper routing)
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ]
+  "accountAssociation": {
+    "header": "eyJmaWQiOjUzMjAxNywidHlwZSI6ImF1dGgiLCJrZXkiOiIweDQ5ZEIzNUUxOTc4NDBBNjkxMUJEZWJjZjNhQTZjMzg5Y2I3NTM0Y0QifQ",
+    "payload": "eyJkb21haW4iOiJyb2NrZXQtc2hvb3Rlci1zZXZlbi52ZXJjZWwuYXBwIn0",
+    "signature": "AAAAAAAAAAAAAAAAyhG94Fl3s2MRZwKIYr4qFzl2yhEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkSCrVbLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAul7REO_bo9AFv8iC11NYrLu4WEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVQ_-6NvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA2R5CPCIzscZ2Maha--4FRcDAmjFbVM5SwWrW0DsL4jVwpMJG-7eGqYoVmnNXFEZFYrxvPXwChhzXmmW0G_1dEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA8kQ2smlR0nxLd6JOINXLZtPTn4HhWwqMROytRWUz0BEOrSzgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEHARqWUjjwiJIWg84wcBXozklppE_1R91prutRgUEwpNC13G6aMlHw61_7n0NDNn3wf0ef1jlSxQJUUn0PKjOUPHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkkmSSZJJkkmSSZJJkkmSSZJJkkmSSZJJkkmSSZJJkkg"
+ },
+
+  miniapp: {
+    version: "1",
+
+    name: "Rocket Shooter",
+    subtitle: "Epic space shooter game",
+    description: "Play, score, and save your high scores directly on the Base blockchain.",
+    tagline: "Defend the skies. Go onchain.",
+
+    homeUrl: "https://rocket-shooter-seven.vercel.app",
+    iconUrl: "https://rocket-shooter-seven.vercel.app/icons/icon-512.png",
+
+    splashImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
+    splashBackgroundColor: "#1e3a8a",
+
+    primaryCategory: "games",
+    tags: ["game", "arcade", "base", "onchain", "farcaster"],
+
+    heroImageUrl: "https://rocket-shooter-seven.vercel.app/images/hero.png",
+    screenshotUrls: [
+      "https://rocket-shooter-seven.vercel.app/screenshots/screenshot-portrait.png"
+    ],
+
+    ogTitle: "🚀 Rocket Shooter on Base",
+    ogDescription: "Epic arcade shooter where you destroy enemies and save high scores on Base blockchain.",
+    ogImageUrl: "https://rocket-shooter-seven.vercel.app/images/og.png"
+  }
 }
