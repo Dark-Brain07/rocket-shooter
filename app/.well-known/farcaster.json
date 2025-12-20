@@ -17,11 +17,7 @@
     "name": "Rocket Shooter",
     "subtitle": "Epic Space Battle Game",
     "description": "Action-packed space shooter with blockchain leaderboard on Base Mainnet. Destroy enemy rockets and planes, avoid birds, save your high scores on-chain!",
-    "screenshotUrls": [
-      "https://rocket-shooter.vercel.app/screenshot-portrait.png",
-      "https://rocket-shooter.vercel.app/screenshot-landscape.png",
-      "https://rocket-shooter.vercel.app/screenshot-gameplay.png"
-    ],
+    
     "iconUrl": "https://rocket-shooter.vercel.app/icon.png",
     "splashImageUrl": "https://rocket-shooter.vercel.app/splash.png",
     "splashBackgroundColor": "#0f172a",
