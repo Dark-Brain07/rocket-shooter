@@ -1,4 +1,4 @@
-# Design Session 17
-Notes taken during run 17.
+# Design Session 27
+Notes taken during run 27.
 - Action taken
 - Observations in game tests
