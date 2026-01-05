@@ -1,4 +1,4 @@
-# Design Session 40
-Notes taken during run 40.
+# Design Session 110
+Notes taken during run 110.
 - Action taken
 - Observations in game tests
