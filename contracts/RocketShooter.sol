@@ -114,5 +114,6 @@ contract RocketShooter {
             scores[i] = leaderboard[i].score;
         }
         
+        return (players_, scores);
     }
 }
