@@ -1,2 +1,2 @@
-// Engine sub-system edit seq: 13
+// Engine sub-system edit seq: 413
 export class SpriteRenderer { render(ctx, dt) { /* placeholder context logic */ } }
