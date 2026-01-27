@@ -1,3 +1,2 @@
-// Engine sub-system edit seq: 176
-import { Vector2 } from './math';
-export class Entity_176 { constructor(x, y) { this.pos = new Vector2(x, y); } update() {} }
+// Engine sub-system edit seq: 576
+export function detectCollision(a, b) { return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.h + a.y > b.y; }
