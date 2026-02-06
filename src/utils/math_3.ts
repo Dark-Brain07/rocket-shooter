@@ -1,4 +1,4 @@
-// Core util 403
-export function calc_403(val: number) {
-  return val * 0.07;
+// Core util 803
+export function calc_803(val: number) {
+  return val * 0.39;
 }
