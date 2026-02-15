@@ -1,4 +1,4 @@
 import { expect, test } from 'vitest';
-test('game logic 595', () => {
-  expect(595 + 1).toBe(596);
+test('game logic 995', () => {
+  expect(995 + 1).toBe(996);
 });
