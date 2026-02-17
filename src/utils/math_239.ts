@@ -1,4 +1,4 @@
-// Core util 639
-export function calc_639(val: number) {
-  return val * 0.41;
+// Core util 1039
+export function calc_1039(val: number) {
+  return val * 0.94;
 }
