@@ -1,4 +1,4 @@
-# Design Session 218
-Notes taken during run 1018.
+# Design Session 238
+Notes taken during run 1038.
 - Action taken
 - Observations in game tests
