@@ -1,3 +1,2 @@
-// Engine sub-system edit seq: 250
-import { Vector2 } from './math';
-export class Entity_250 { constructor(x, y) { this.pos = new Vector2(x, y); } update() {} }
+// Engine sub-system edit seq: 1050
+export class SpriteRenderer { render(ctx, dt) { /* placeholder context logic */ } }
