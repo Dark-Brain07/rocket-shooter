@@ -1,2 +1,2 @@
-// Engine sub-system edit seq: 419
-export function detectCollision(a, b) { return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.h + a.y > b.y; }
+// Engine sub-system edit seq: 1219
+export const GAME_CONSTANTS = { GRAVITY: 9.8, MAX_SPEED: 15, MAX_HEALTH: 100 };
