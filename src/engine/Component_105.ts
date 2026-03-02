@@ -1,2 +1,3 @@
-// Engine sub-system edit seq: 105
-export function detectCollision(a, b) { return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.h + a.y > b.y; }
+// Engine sub-system edit seq: 1305
+import { Vector2 } from './math';
+export class Entity_105 { constructor(x, y) { this.pos = new Vector2(x, y); } update() {} }
