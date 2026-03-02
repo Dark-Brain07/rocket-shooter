@@ -1,3 +1,2 @@
-// Engine sub-system edit seq: 515
-import { Vector2 } from './math';
-export class Entity_115 { constructor(x, y) { this.pos = new Vector2(x, y); } update() {} }
+// Engine sub-system edit seq: 1315
+export const GAME_CONSTANTS = { GRAVITY: 9.8, MAX_SPEED: 15, MAX_HEALTH: 100 };
