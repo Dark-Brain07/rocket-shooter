@@ -1,4 +1,4 @@
-// Core util 531
-export function calc_531(val: number) {
-  return val * 0.40;
+// Core util 1331
+export function calc_1331(val: number) {
+  return val * 0.14;
 }
