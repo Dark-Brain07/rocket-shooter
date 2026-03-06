@@ -29,7 +29,7 @@ const RocketShooter = () => {
   const [walletAddress, setWalletAddress] = useState(null);
   const [showWalletMenu, setShowWalletMenu] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  
+
   const playerRef = useRef({ x: GAME_WIDTH / 2, y: GAME_HEIGHT - 80, speed: 5 });
   const enemiesRef = useRef([]);
   const bulletsRef = useRef([]);
@@ -127,7 +127,7 @@ const RocketShooter = () => {
     gradient.addColorStop(1, '#93c5fd');
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
-    
+
     cloudRef.current.forEach(cloud => {
       ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
       ctx.beginPath();
@@ -135,7 +135,7 @@ const RocketShooter = () => {
       ctx.arc(cloud.x + cloud.size * 0.7, cloud.y, cloud.size * 0.8, 0, Math.PI * 2);
       ctx.arc(cloud.x + cloud.size * 1.3, cloud.y, cloud.size * 0.7, 0, Math.PI * 2);
       ctx.fill();
-      
+
       cloud.x += cloud.speed;
       if (cloud.x > GAME_WIDTH + cloud.size * 2) {
         cloud.x = -cloud.size * 2;
@@ -207,22 +207,22 @@ const RocketShooter = () => {
 
   const checkCollision = (obj1, obj2, size1, size2) => {
     return Math.abs(obj1.x - obj2.x) < (size1 + size2) / 2 &&
-           Math.abs(obj1.y - obj2.y) < (size1 + size2) / 2;
+      Math.abs(obj1.y - obj2.y) < (size1 + size2) / 2;
   };
 
   const updateGame = () => {
     const player = playerRef.current;
-    
+
     if (keysRef.current['w'] || keysRef.current['ArrowUp']) player.y = Math.max(GAME_HEIGHT / 2, player.y - player.speed);
     if (keysRef.current['s'] || keysRef.current['ArrowDown']) player.y = Math.min(GAME_HEIGHT - 30, player.y + player.speed);
     if (keysRef.current['a'] || keysRef.current['ArrowLeft']) player.x = Math.max(20, player.x - player.speed);
     if (keysRef.current['d'] || keysRef.current['ArrowRight']) player.x = Math.min(GAME_WIDTH - 20, player.x + player.speed);
-    
+
     if (touchRef.current.active) {
       const dx = touchRef.current.x - player.x;
       const dy = touchRef.current.y - player.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      
+
       if (dist > 10) {
         player.x += (dx / dist) * player.speed;
         player.y += (dy / dist) * player.speed;
@@ -230,9 +230,9 @@ const RocketShooter = () => {
         player.y = Math.max(GAME_HEIGHT / 2, Math.min(GAME_HEIGHT - 30, player.y));
       }
     }
-    
+
     shootBullet();
-    
+
     bulletsRef.current = bulletsRef.current.filter(bullet => {
       bullet.y -= bullet.speed;
       return bullet.y > -10;
@@ -240,25 +240,25 @@ const RocketShooter = () => {
 
     enemyBulletsRef.current = enemyBulletsRef.current.filter(bullet => {
       bullet.y += bullet.speed;
-      
+
       if (bullet.y > GAME_HEIGHT) return false;
-      
+
       if (checkCollision(player, bullet, PLAYER_SIZE, BULLET_SIZE)) {
         setLives(prev => prev - 1);
         createExplosion(bullet.x, bullet.y);
         return false;
       }
-      
+
       return true;
     });
-    
+
     enemiesRef.current = enemiesRef.current.filter(enemy => {
       enemy.y += enemy.speed;
-      
+
       if (enemy.y > 50 && enemy.y < GAME_HEIGHT - 100) {
         enemyShoot(enemy);
       }
-      
+
       if (enemy.y > GAME_HEIGHT) return false;
       if (checkCollision(player, enemy, PLAYER_SIZE, ENEMY_SIZE)) {
         setLives(prev => prev - 1);
@@ -267,7 +267,7 @@ const RocketShooter = () => {
       }
       return true;
     });
-    
+
     birdsRef.current = birdsRef.current.filter(bird => {
       bird.y += bird.speed;
       bird.frame++;
@@ -279,10 +279,10 @@ const RocketShooter = () => {
       }
       return true;
     });
-    
+
     bulletsRef.current = bulletsRef.current.filter(bullet => {
       let hit = false;
-      
+
       enemiesRef.current = enemiesRef.current.filter(enemy => {
         if (checkCollision(bullet, enemy, BULLET_SIZE, ENEMY_SIZE)) {
           enemy.health--;
@@ -295,7 +295,7 @@ const RocketShooter = () => {
         }
         return true;
       });
-      
+
       birdsRef.current = birdsRef.current.filter(bird => {
         if (checkCollision(bullet, bird, BULLET_SIZE, BIRD_SIZE)) {
           setScore(prev => Math.max(0, prev - 15));
@@ -305,17 +305,17 @@ const RocketShooter = () => {
         }
         return true;
       });
-      
+
       return !hit;
     });
-    
+
     particlesRef.current = particlesRef.current.filter(particle => {
       particle.x += particle.vx;
       particle.y += particle.vy;
       particle.life--;
       return particle.life > 0;
     });
-    
+
     gameTimeRef.current++;
     if (gameTimeRef.current % 60 === 0) spawnEnemy();
     if (gameTimeRef.current % 180 === 0) spawnBird();
@@ -432,7 +432,7 @@ const RocketShooter = () => {
 
       if (!res.ok) return;
       const data = await res.json();
-      
+
       if (data.okay && data.result) {
         // Parse the Clarity tuple response
         // For now, use localStorage as fallback

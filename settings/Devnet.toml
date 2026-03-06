@@ -1,0 +1,6 @@
+﻿[network]
+name = 'devnet'
+
+[accounts.deployer]
+mnemonic = 'test test test test test test test test test test test junk'
+balance = 10_000_000_000_000
