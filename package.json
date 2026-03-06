@@ -3,16 +3,18 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Rocket Shooter - Epic space shooter game on Base blockchain",
+  "description": "Rocket Shooter - Epic space shooter game on Stacks blockchain",
   "author": "Dark-Brain07",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/copy-manifest.js",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "ethers": "^5.7.2",
+    "@stacks/connect": "^8.2.5",
+    "@stacks/network": "^7.3.1",
+    "@stacks/transactions": "^7.3.1",
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

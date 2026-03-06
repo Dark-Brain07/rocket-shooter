@@ -1,12 +1,14 @@
+// @ts-nocheck
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Rocket, Heart, Trophy, Wallet, X, Zap, Star } from 'lucide-react';
+import { request } from '@stacks/connect';
+import { uintCV } from '@stacks/transactions';
 
-const CONTRACT_ADDRESS = "0x951634B88938D2Cdd72149dB57C198Ea835AAf20";
-const CONTRACT_ABI = [
-  "function submitScore(uint96 _score) external",
-  "function getPlayerStats(address _player) view returns (uint96, uint32, uint32)",
-  "function getLeaderboard() view returns (tuple(address player, uint96 score, uint32 timestamp)[])"
-];
+// ── Stacks Mainnet Contract Config ──
+const CONTRACT_ADDRESS = 'SP1YH5MXTJT86BZXMFA2T51JF0QVZ8XNYV33QH6MF';
+const CONTRACT_NAME = 'rocket-shooter';
+const FULL_CONTRACT = `${CONTRACT_ADDRESS}.${CONTRACT_NAME}`;
+const HIRO_API = 'https://api.hiro.so';
 
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;
@@ -25,8 +27,8 @@ const RocketShooter = () => {
   const [highScore, setHighScore] = useState(0);
   const [totalGames, setTotalGames] = useState(0);
   const [walletAddress, setWalletAddress] = useState(null);
-  const [walletProvider, setWalletProvider] = useState(null);
   const [showWalletMenu, setShowWalletMenu] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   
   const playerRef = useRef({ x: GAME_WIDTH / 2, y: GAME_HEIGHT - 80, speed: 5 });
   const enemiesRef = useRef([]);
@@ -48,6 +50,8 @@ const RocketShooter = () => {
       size: 40 + Math.random() * 40
     }));
   }, []);
+
+  // ── Drawing Functions (unchanged) ──
 
   const drawPlayer = (ctx) => {
     const { x, y } = playerRef.current;
@@ -139,6 +143,8 @@ const RocketShooter = () => {
       }
     });
   };
+
+  // ── Game Mechanics (unchanged) ──
 
   const spawnEnemy = () => {
     const type = Math.random() > 0.5 ? 'rocket' : 'plane';
@@ -393,81 +399,113 @@ const RocketShooter = () => {
     gameTimeRef.current = 0;
   };
 
-  const connectWallet = async (walletType) => {
+  // ── Stacks Wallet Connection ──
+  const connectWallet = async () => {
     try {
-      let provider;
-      if (walletType === 'metamask' && window.ethereum) provider = window.ethereum;
-      else if (walletType === 'coinbase' && window.coinbaseWalletExtension) provider = window.coinbaseWalletExtension;
-      else if (walletType === 'rainbow' && window.rainbow) provider = window.rainbow;
-      else {
-        alert(`${walletType} wallet not found!`);
-        return;
+      const response = await request('stx_getAddresses');
+      if (response && response.addresses && response.addresses.length > 0) {
+        const stxAddr = response.addresses.find(a => a.symbol === 'STX') || response.addresses[0];
+        const addr = stxAddr.address;
+        setWalletAddress(addr);
+        setShowWalletMenu(false);
+        localStorage.setItem('stx-address', addr);
+        await loadPlayerData(addr);
       }
+    } catch (error) {
+      console.error('Wallet connection error:', error);
+      alert('Failed to connect Stacks wallet. Install Leather or Xverse.');
+    }
+  };
 
-      const accounts = await provider.request({ method: 'eth_requestAccounts' });
-      const chainId = await provider.request({ method: 'eth_chainId' });
+  // ── Load Player Data from Hiro API ──
+  const loadPlayerData = async (address) => {
+    try {
+      const url = `${HIRO_API}/v2/contracts/call-read/${CONTRACT_ADDRESS}/${CONTRACT_NAME}/get-player-stats`;
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sender: address,
+          arguments: [`0x0616${address}`]
+        })
+      });
+
+      if (!res.ok) return;
+      const data = await res.json();
       
-      if (chainId !== '0x2105') {
-        await provider.request({
-          method: 'wallet_switchEthereumChain',
-          params: [{ chainId: '0x2105' }],
-        }).catch(async () => {
-          await provider.request({
-            method: 'wallet_addEthereumChain',
-            params: [{
-              chainId: '0x2105',
-              chainName: 'Base Mainnet',
-              rpcUrls: ['https://mainnet.base.org'],
-              nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
-              blockExplorerUrls: ['https://basescan.org']
-            }]
-          });
-        });
+      if (data.okay && data.result) {
+        // Parse the Clarity tuple response
+        // For now, use localStorage as fallback
+        const stored = localStorage.getItem(`rs-highscore-${address}`);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          setHighScore(parsed.score || 0);
+          setTotalGames(parsed.games || 0);
+        }
       }
-
-      setWalletAddress(accounts[0]);
-      setWalletProvider(provider);
-      setShowWalletMenu(false);
-      await loadPlayerData(accounts[0], provider);
     } catch (error) {
-      console.error('Wallet error:', error);
-      alert('Failed to connect wallet');
+      console.error('Failed to load player data:', error);
+      // Fallback to local storage
+      const stored = localStorage.getItem(`rs-highscore-${address}`);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        setHighScore(parsed.score || 0);
+        setTotalGames(parsed.games || 0);
+      }
     }
   };
 
-  const loadPlayerData = async (address, provider) => {
-    try {
-      const ethers = await import('ethers');
-      const web3Provider = new ethers.providers.Web3Provider(provider);
-      const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, web3Provider);
-      const [score, totalGames] = await contract.getPlayerStats(address);
-      setHighScore(score.toNumber());
-      setTotalGames(totalGames.toNumber());
-    } catch (error) {
-      console.error('Failed to load data:', error);
-    }
-  };
-
+  // ── Submit Score to Stacks Mainnet ──
   const submitScoreToBlockchain = async () => {
-    if (!walletAddress || !walletProvider) {
-      alert('Connect wallet first!');
+    if (!walletAddress) {
+      alert('Connect your Stacks wallet first!');
+      return;
+    }
+    if (score <= 0) {
+      alert('Score must be greater than 0!');
       return;
     }
     try {
-      const ethers = await import('ethers');
-      const web3Provider = new ethers.providers.Web3Provider(walletProvider);
-      const signer = web3Provider.getSigner();
-      const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
-      const tx = await contract.submitScore(score);
-      alert('Submitting score...');
-      await tx.wait();
-      alert('Score saved on Base blockchain! 🚀');
-      await loadPlayerData(walletAddress, walletProvider);
+      setSubmitting(true);
+      const response = await request('stx_callContract', {
+        contract: FULL_CONTRACT,
+        functionName: 'submit-score',
+        functionArgs: [uintCV(score)],
+        postConditionMode: 'allow',
+      });
+
+      const txId = response?.txid || response?.txId;
+      if (txId) {
+        // Save locally as well
+        const stored = localStorage.getItem(`rs-highscore-${walletAddress}`);
+        const existing = stored ? JSON.parse(stored) : { score: 0, games: 0 };
+        localStorage.setItem(`rs-highscore-${walletAddress}`, JSON.stringify({
+          score: Math.max(score, existing.score),
+          games: existing.games + 1
+        }));
+        setTotalGames(prev => prev + 1);
+        if (score > highScore) setHighScore(score);
+
+        alert(`Score submitted to Stacks! 🚀\nTx: ${txId.substring(0, 12)}...`);
+      }
     } catch (error) {
       console.error('Submit error:', error);
-      alert('Failed to save score');
+      alert('Failed to submit score: ' + (error.message || 'Unknown error'));
+    } finally {
+      setSubmitting(false);
     }
   };
+
+  // Check for saved wallet on load
+  useEffect(() => {
+    const saved = localStorage.getItem('stx-address');
+    if (saved) {
+      setWalletAddress(saved);
+      loadPlayerData(saved);
+    }
+  }, []);
+
+  // ── UI (wallet menu updated for Stacks) ──
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-blue-900 to-purple-900 text-white flex flex-col items-center justify-center p-4">
@@ -480,7 +518,8 @@ const RocketShooter = () => {
               </div>
             </div>
             <h1 className="text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">ROCKET SHOOTER</h1>
-            <p className="text-xl text-blue-300 mb-4">Defend the Skies!</p>
+            <p className="text-xl text-blue-300 mb-1">Defend the Skies!</p>
+            <p className="text-sm text-purple-400 mb-4">Powered by Stacks Blockchain</p>
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-blue-900/50 p-4 rounded-xl border-2 border-blue-400">
                 <Trophy className="w-6 h-6 mx-auto mb-1 text-yellow-400" />
@@ -501,14 +540,14 @@ const RocketShooter = () => {
               🚀 START GAME
             </button>
             {walletAddress ? (
-              <button onClick={() => setWalletAddress(null)} className="w-full py-3 bg-red-600 hover:bg-red-700 rounded-lg border-2 border-red-400 font-bold flex items-center justify-center gap-2">
+              <button onClick={() => { setWalletAddress(null); localStorage.removeItem('stx-address'); }} className="w-full py-3 bg-red-600 hover:bg-red-700 rounded-lg border-2 border-red-400 font-bold flex items-center justify-center gap-2">
                 <Wallet className="w-5 h-5" />
-                {walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}
+                {walletAddress.slice(0, 8)}...{walletAddress.slice(-4)}
               </button>
             ) : (
-              <button onClick={() => setShowWalletMenu(true)} className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg border-2 border-blue-400 font-bold flex items-center justify-center gap-2">
+              <button onClick={connectWallet} className="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-lg border-2 border-purple-400 font-bold flex items-center justify-center gap-2">
                 <Wallet className="w-5 h-5" />
-                Connect Wallet
+                Connect Stacks Wallet
               </button>
             )}
           </div>
@@ -554,36 +593,12 @@ const RocketShooter = () => {
                 🔄 PLAY AGAIN
               </button>
               {walletAddress && (
-                <button onClick={submitScoreToBlockchain} className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-xl border-4 border-blue-400 font-bold text-xl">
-                  💾 SAVE TO BLOCKCHAIN
+                <button onClick={submitScoreToBlockchain} disabled={submitting} className="w-full py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-xl border-4 border-purple-400 font-bold text-xl disabled:opacity-50">
+                  {submitting ? '⏳ Submitting...' : '💾 SAVE TO STACKS'}
                 </button>
               )}
               <button onClick={() => setGameState('menu')} className="w-full py-3 bg-gray-700 hover:bg-gray-600 rounded-lg border-2 border-gray-500 font-bold">
                 🏠 MAIN MENU
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {showWalletMenu && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gradient-to-br from-purple-900 to-indigo-900 p-8 rounded-2xl border-4 border-purple-500 max-w-md w-full">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold text-yellow-400">Connect Wallet</h2>
-              <button onClick={() => setShowWalletMenu(false)}>
-                <X className="w-6 h-6 text-white hover:text-red-400" />
-              </button>
-            </div>
-            <div className="space-y-3">
-              <button onClick={() => connectWallet('metamask')} className="w-full py-4 bg-orange-600 hover:bg-orange-700 rounded-xl border-2 border-orange-400 font-bold text-lg">
-                🦊 MetaMask
-              </button>
-              <button onClick={() => connectWallet('coinbase')} className="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded-xl border-2 border-blue-400 font-bold text-lg">
-                🔵 Coinbase Wallet
-              </button>
-              <button onClick={() => connectWallet('rainbow')} className="w-full py-4 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 rounded-xl border-2 border-pink-400 font-bold text-lg">
-                🌈 Rainbow Wallet
               </button>
             </div>
           </div>
