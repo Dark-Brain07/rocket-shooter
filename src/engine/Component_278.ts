@@ -1,2 +1,2 @@
-// Engine sub-system edit seq: 1078
-export class SpriteRenderer { render(ctx, dt) { /* placeholder context logic */ } }
+// Engine sub-system edit seq: 1478
+export const GAME_CONSTANTS = { GRAVITY: 9.8, MAX_SPEED: 15, MAX_HEALTH: 100 };
