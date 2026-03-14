@@ -1,4 +1,4 @@
-# Design Session 274
-Notes taken during run 1474.
+# Design Session 394
+Notes taken during run 1594.
 - Action taken
 - Observations in game tests
