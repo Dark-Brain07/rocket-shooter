@@ -1,6 +1,5 @@
 {
-  "name": "rocket-shooter",
-  "private": true,
+  "name": "rocket-shooter-game-darkbrain",
   "version": "1.0.0",
   "type": "module",
   "description": "Rocket Shooter - Epic space shooter game on Stacks blockchain",
