@@ -1,2 +1,2 @@
-// Engine sub-system edit seq: 578
-export const GAME_CONSTANTS = { GRAVITY: 9.8, MAX_SPEED: 15, MAX_HEALTH: 100 };
+// Engine sub-system edit seq: 1778
+export class SpriteRenderer { render(ctx, dt) { /* placeholder context logic */ } }
