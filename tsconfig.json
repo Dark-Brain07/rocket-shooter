@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
-  "include": ["src", "minikit.config.ts"]
+  "include": ["src"]
 }
