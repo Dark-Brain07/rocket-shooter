@@ -1,5 +1,9 @@
 node_modules/
 dist/
+.env
 .env.local
 .DS_Store
-*.log
+Thumbs.db
+*.swp
+coverage/
+npm-debug.log*
