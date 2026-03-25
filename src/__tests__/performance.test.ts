@@ -1,0 +1,1 @@
+import { describe, it, expect } from "vitest"; import { perfMonitor } from "../utils/performance"; describe("PerfMonitor", () => { it("returns 0 FPS initially", () => { perfMonitor.reset(); expect(perfMonitor.getAverageFPS()).toBe(0); }); });
