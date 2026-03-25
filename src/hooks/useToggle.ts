@@ -1,0 +1,1 @@
+import { useState, useCallback } from "react"; export function useToggle(init = false): [boolean, () => void] { const [v, setV] = useState(init); const toggle = useCallback(() => setV(x => !x), []); return [v, toggle]; }
