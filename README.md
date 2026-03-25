@@ -1,37 +1,28 @@
 # Rocket Shooter
+[![CI](https://github.com/Dark-Brain07/rocket-shooter/actions/workflows/ci.yml/badge.svg)](https://github.com/Dark-Brain07/rocket-shooter/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm](https://img.shields.io/npm/v/rocket-shooter-game-darkbrain.svg)](https://www.npmjs.com/package/rocket-shooter-game-darkbrain)
+[![npm](https://img.shields.io/npm/v/@rajuice/rocket-shooter.svg)](https://www.npmjs.com/package/@rajuice/rocket-shooter)
 
 Epic space shooter game built on the Stacks blockchain.
 
-## Live Demo
-Play at [rocket-shooter-seven.vercel.app](https://rocket-shooter-seven.vercel.app)
-
-## Features
-- Canvas-based space combat
-- Wave-based enemy spawning
-- Stacks wallet integration
-- On-chain score submission
-- Touch and keyboard controls
-
 ## Quick Start
 git clone https://github.com/Dark-Brain07/rocket-shooter.git
-npm install
-npm run dev
+cd rocket-shooter && npm install && npm run dev
 
-## Controls
-| Action | Key |
-|--------|-----|
-| Move   | Arrow keys / WASD |
-| Shoot  | Space |
+## Features
+- Canvas-based space combat with wave system
+- 4 enemy types: Basic, Fast, Tank, Boss
+- Power-up system: Shield, Rapid Fire, Double Score, Spread Shot
+- Stacks wallet integration
+- High score tracking
+- PWA installable
+- Docker deployment support
 
-## Architecture
-src/
-  App.tsx         # Main game component
-  utils/          # Helper utilities
-  hooks/          # Custom React hooks
-  types/          # TypeScript types
-  constants.ts    # Game constants
+## Documentation
+- [API Reference](docs/api-reference.md)
+- [Game Architecture](docs/game-architecture.md)
+- [Wallet Integration](docs/wallet-integration.md)
+- [Troubleshooting](docs/troubleshooting.md)
 
 ## License
 MIT
