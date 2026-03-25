@@ -1,0 +1,1 @@
+import { describe, it, expect } from "vitest"; import { inputHandler } from "../utils/input"; describe("InputHandler", () => { it("starts with no keys pressed", () => { inputHandler.clear(); expect(inputHandler.isPressed("a")).toBe(false); }); });
