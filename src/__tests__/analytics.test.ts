@@ -1,0 +1,1 @@
+import { describe, it, expect } from "vitest"; import { trackEvent, trackGameStart, getEvents } from "../utils/analytics"; describe("analytics", () => { it("tracks events", () => { trackEvent("test"); const e = getEvents(); expect(e[e.length - 1].name).toBe("test"); }); it("tracks game start", () => { trackGameStart(); expect(getEvents().pop()?.name).toBe("game_start"); }); });
