@@ -1,0 +1,1 @@
+import { describe, it, expect } from "vitest"; import { isMobileDevice } from "../utils/device"; describe("device", () => { it("detects non-mobile in test env", () => { expect(isMobileDevice()).toBe(false); }); });
