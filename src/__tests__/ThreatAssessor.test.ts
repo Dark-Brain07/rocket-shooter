@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ThreatAssessor}from'../game/ai/ThreatAssessor';
+describe('ThreatAssessor',()=>{it('creates',()=>expect(new ThreatAssessor()).toBeDefined());it('toggles',()=>{const x=new ThreatAssessor();x.disable();expect(x.isEnabled()).toBe(false);});});
