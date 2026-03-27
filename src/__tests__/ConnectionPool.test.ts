@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ConnectionPool}from'../services/network/ConnectionPool';
+describe('ConnectionPool',()=>{it('disconnected initially',()=>expect(new ConnectionPool().isConnected()).toBe(false));});
