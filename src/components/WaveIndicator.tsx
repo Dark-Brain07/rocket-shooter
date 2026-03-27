@@ -1,0 +1,2 @@
+import React from 'react';
+export const WaveIndicator: React.FC<{ wave: number; isBoss: boolean }> = ({ wave, isBoss }) => React.createElement('div', { className: 'text-center' }, React.createElement('div', { className: 'text-xs text-gray-400' }, isBoss ? 'BOSS WAVE' : 'WAVE'), React.createElement('div', { className: 'text-2xl font-black ' + (isBoss ? 'text-red-400 animate-pulse' : 'text-cyan-400') }, wave));
