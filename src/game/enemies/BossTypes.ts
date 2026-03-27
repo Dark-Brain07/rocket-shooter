@@ -1,0 +1,3 @@
+export interface BossPhase{hp:number;speed:number;attackPattern:string;spawnMinions:boolean;}
+export interface BossConfig{id:string;name:string;phases:BossPhase[];totalHP:number;reward:number;color:string;size:number;}
+export const BOSSES:Record<string,BossConfig>={'boss-1':{id:'boss-1',name:'Destroyer',phases:[{hp:50,speed:1,attackPattern:'spread',spawnMinions:false},{hp:30,speed:2,attackPattern:'laser',spawnMinions:true}],totalHP:80,reward:300,color:'#ff0000',size:60},'boss-2':{id:'boss-2',name:'Mothership',phases:[{hp:80,speed:0.5,attackPattern:'rain',spawnMinions:true},{hp:50,speed:1,attackPattern:'spiral',spawnMinions:true},{hp:30,speed:1.5,attackPattern:'beam',spawnMinions:false}],totalHP:160,reward:500,color:'#ff00ff',size:80}};
