@@ -32,11 +32,11 @@
     "@stacks/network": "^7.3.1",
     "@stacks/transactions": "^7.3.1",
     "lucide-react": "^0.263.1",
-    "react": "^18.2.0",
+    "react": "^19.2.4",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
