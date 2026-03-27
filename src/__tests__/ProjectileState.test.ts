@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{createProjectileState}from'../types/ProjectileState';
+describe('ProjectileState',()=>{it('creates',()=>{const s=createProjectileState('t');expect(s.active).toBe(true);});});
