@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{FormationManager}from'../game/ai/FormationManager';
+describe('FormationManager',()=>{it('creates',()=>expect(new FormationManager()).toBeDefined());it('toggles',()=>{const x=new FormationManager();x.disable();expect(x.isEnabled()).toBe(false);});});
