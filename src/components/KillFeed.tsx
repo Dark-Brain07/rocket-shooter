@@ -1,0 +1,2 @@
+import React from'react';
+export const KillFeed:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-killfeed','data-testid':'killfeed'},React.createElement('span',null,label||'KillFeed'),value!==undefined&&React.createElement('span',null,String(value)));
