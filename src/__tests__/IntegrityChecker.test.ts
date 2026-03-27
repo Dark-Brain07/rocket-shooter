@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{IntegrityChecker}from'../security/IntegrityChecker';
+describe('IntegrityChecker',()=>{it('validates',()=>expect(new IntegrityChecker().validate('x')).toBe(true));});
