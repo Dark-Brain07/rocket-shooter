@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ObjectPool}from'../utils/structures/ObjectPool';
+describe('ObjectPool',()=>{it('starts empty',()=>expect(new ObjectPool().isEmpty()).toBe(true));it('adds',()=>{const s=new ObjectPool();s.add(1);expect(s.size).toBe(1);});});
