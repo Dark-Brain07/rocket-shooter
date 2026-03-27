@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossMusic}from'../game/bosses/BossMusic';
+describe('BossMusic',()=>{it('starts inactive',()=>expect(new BossMusic().isActive()).toBe(false));it('activates',()=>{const x=new BossMusic();x.activate();expect(x.isActive()).toBe(true);});});
