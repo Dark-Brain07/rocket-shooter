@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{createWeaponState}from'../types/WeaponState';
+describe('WeaponState',()=>{it('creates',()=>{const s=createWeaponState('t');expect(s.active).toBe(true);});});
