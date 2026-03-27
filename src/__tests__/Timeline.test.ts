@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Timeline}from'../game/animation/Timeline';
+describe('Timeline',()=>{it('starts stopped',()=>expect(new Timeline().isPlaying()).toBe(false));it('plays',()=>{const x=new Timeline();x.play();expect(x.isPlaying()).toBe(true);});});
