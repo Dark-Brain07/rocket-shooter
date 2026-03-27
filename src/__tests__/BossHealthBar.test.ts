@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossHealthBar}from'../game/bosses/BossHealthBar';
+describe('BossHealthBar',()=>{it('starts inactive',()=>expect(new BossHealthBar().isActive()).toBe(false));it('activates',()=>{const x=new BossHealthBar();x.activate();expect(x.isActive()).toBe(true);});});
