@@ -1,0 +1,2 @@
+export interface ProjectileState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createProjectileState(id:string):ProjectileState{return{id,active:true,timestamp:Date.now(),data:{}};}
