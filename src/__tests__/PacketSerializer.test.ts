@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{PacketSerializer}from'../services/network/PacketSerializer';
+describe('PacketSerializer',()=>{it('disconnected initially',()=>expect(new PacketSerializer().isConnected()).toBe(false));});
