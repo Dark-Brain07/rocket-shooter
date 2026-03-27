@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{HeartbeatMonitor}from'../services/network/HeartbeatMonitor';
+describe('HeartbeatMonitor',()=>{it('disconnected initially',()=>expect(new HeartbeatMonitor().isConnected()).toBe(false));});
