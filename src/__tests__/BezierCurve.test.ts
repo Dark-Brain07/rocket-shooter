@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BezierCurve}from'../game/animation/BezierCurve';
+describe('BezierCurve',()=>{it('starts stopped',()=>expect(new BezierCurve().isPlaying()).toBe(false));it('plays',()=>{const x=new BezierCurve();x.play();expect(x.isPlaying()).toBe(true);});});
