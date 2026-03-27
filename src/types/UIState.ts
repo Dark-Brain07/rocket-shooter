@@ -1,0 +1,2 @@
+export interface UIState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createUIState(id:string):UIState{return{id,active:true,timestamp:Date.now(),data:{}};}
