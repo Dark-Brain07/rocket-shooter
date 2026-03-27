@@ -1,0 +1,1 @@
+type Fn<T>=((d:T)=>void);export class EventEmitter<E extends Record<string,any>>{private m=new Map<keyof E,Set<Fn<any>>>();on<K extends keyof E>(e:K,fn:Fn<E[K]>){if(!this.m.has(e))this.m.set(e,new Set());this.m.get(e)!.add(fn);}off<K extends keyof E>(e:K,fn:Fn<E[K]>){this.m.get(e)?.delete(fn);}emit<K extends keyof E>(e:K,d:E[K]){this.m.get(e)?.forEach(fn=>fn(d));}}
