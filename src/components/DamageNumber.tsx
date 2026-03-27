@@ -1,0 +1,2 @@
+import React from'react';
+export const DamageNumber:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-damagenumber','data-testid':'damagenumber'},React.createElement('span',null,label||'DamageNumber'),value!==undefined&&React.createElement('span',null,String(value)));
