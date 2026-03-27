@@ -1,0 +1,2 @@
+export interface NetworkState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createNetworkState(id:string):NetworkState{return{id,active:true,timestamp:Date.now(),data:{}};}
