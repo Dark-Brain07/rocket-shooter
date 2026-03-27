@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{EnemiesRenderer}from'../game/renderer/EnemiesRenderer';
+describe('EnemiesRenderer',()=>{it('initializes',()=>expect(new EnemiesRenderer()).toBeDefined());});
