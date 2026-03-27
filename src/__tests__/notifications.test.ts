@@ -1,0 +1,2 @@
+import { describe, it, expect, vi } from 'vitest'; import { notify, subscribe } from '../notifications/NotificationManager';
+describe('notifications', () => { it('creates id', () => expect(notify('info', 'T', 'M')).toContain('n-')); it('notifies subs', () => { const fn = vi.fn(); subscribe(fn); notify('success', 'T', 'M'); expect(fn).toHaveBeenCalled(); }); });
