@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossAttackPattern}from'../game/bosses/BossAttackPattern';
+describe('BossAttackPattern',()=>{it('starts inactive',()=>expect(new BossAttackPattern().isActive()).toBe(false));it('activates',()=>{const x=new BossAttackPattern();x.activate();expect(x.isActive()).toBe(true);});});
