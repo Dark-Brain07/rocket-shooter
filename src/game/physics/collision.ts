@@ -1,0 +1,3 @@
+export function circleIntersect(ax:number,ay:number,ar:number,bx:number,by:number,br:number):boolean{const dx=ax-bx;const dy=ay-by;return dx*dx+dy*dy<(ar+br)*(ar+br);}
+export function pointInCircle(px:number,py:number,cx:number,cy:number,r:number):boolean{const dx=px-cx;const dy=py-cy;return dx*dx+dy*dy<r*r;}
+export function rectCircleIntersect(rx:number,ry:number,rw:number,rh:number,cx:number,cy:number,cr:number):boolean{const nx=Math.max(rx,Math.min(cx,rx+rw));const ny=Math.max(ry,Math.min(cy,ry+rh));const dx=cx-nx;const dy=cy-ny;return dx*dx+dy*dy<cr*cr;}
