@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{MotionPath}from'../game/animation/MotionPath';
+describe('MotionPath',()=>{it('starts stopped',()=>expect(new MotionPath().isPlaying()).toBe(false));it('plays',()=>{const x=new MotionPath();x.play();expect(x.isPlaying()).toBe(true);});});
