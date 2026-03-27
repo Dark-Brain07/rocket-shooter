@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ShakeEffect}from'../game/animation/ShakeEffect';
+describe('ShakeEffect',()=>{it('starts stopped',()=>expect(new ShakeEffect().isPlaying()).toBe(false));it('plays',()=>{const x=new ShakeEffect();x.play();expect(x.isPlaying()).toBe(true);});});
