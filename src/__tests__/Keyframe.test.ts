@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Keyframe}from'../game/animation/Keyframe';
+describe('Keyframe',()=>{it('starts stopped',()=>expect(new Keyframe().isPlaying()).toBe(false));it('plays',()=>{const x=new Keyframe();x.play();expect(x.isPlaying()).toBe(true);});});
