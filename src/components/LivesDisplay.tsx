@@ -1,0 +1,2 @@
+import React from 'react';
+export const LivesDisplay: React.FC<{ current: number; max: number }> = ({ current, max }) => React.createElement('div', { className: 'flex gap-1' }, Array.from({ length: max }, (_, i) => React.createElement('span', { key: i, className: 'text-lg ' + (i < current ? 'opacity-100' : 'opacity-20') }, '🚀')));
