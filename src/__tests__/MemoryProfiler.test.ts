@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{MemoryProfiler}from'../utils/profiling/MemoryProfiler';
+describe('MemoryProfiler',()=>{it('records',()=>{const x=new MemoryProfiler();x.start();x.record(10);expect(x.stop().count).toBe(1);});});
