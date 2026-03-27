@@ -1,0 +1,2 @@
+import React from'react';
+export const CriticalAlert:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-criticalalert','data-testid':'criticalalert'},React.createElement('span',null,label||'CriticalAlert'),value!==undefined&&React.createElement('span',null,String(value)));
