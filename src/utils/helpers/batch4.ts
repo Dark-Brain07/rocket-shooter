@@ -1,0 +1,2 @@
+export function processItems4<T>(items:T[],size=10):T[][]{const b:T[][]=[];for(let i=0;i<items.length;i+=size)b.push(items.slice(i,i+size));return b;}
+export function filterValid4<T>(items:(T|null)[]):T[]{return items.filter((x):x is T=>x!=null;}
