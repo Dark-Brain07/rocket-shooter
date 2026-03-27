@@ -1,0 +1,2 @@
+export interface BossState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createBossState(id:string):BossState{return{id,active:true,timestamp:Date.now(),data:{}};}
