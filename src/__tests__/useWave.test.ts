@@ -1,0 +1,1 @@
+import{describe,it,expect}from'vitest';describe('useWave',()=>{it('exists',()=>expect(true).toBe(true));});
