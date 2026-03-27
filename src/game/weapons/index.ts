@@ -1,0 +1,1 @@
+export{WeaponSystem}from'./WeaponSystem';export type{Weapon}from'./WeaponSystem';
