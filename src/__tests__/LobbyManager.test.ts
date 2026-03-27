@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{LobbyManager}from'../services/network/LobbyManager';
+describe('LobbyManager',()=>{it('disconnected initially',()=>expect(new LobbyManager().isConnected()).toBe(false));});
