@@ -1,0 +1,2 @@
+import { describe, it, expect } from 'vitest'; import { getVersion, runMigrations } from '../utils/migrations';
+describe('migrations', () => { beforeEach(() => localStorage.clear()); it('starts at 0', () => expect(getVersion()).toBe(0)); it('runs migrations', () => { const a = runMigrations(); expect(a.length).toBeGreaterThan(0); }); it('skips applied', () => { runMigrations(); expect(runMigrations()).toHaveLength(0); }); });
