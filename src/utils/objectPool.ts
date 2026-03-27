@@ -1,0 +1,1 @@
+export class ObjectPool<T>{private pool:T[]=[];constructor(private factory:()=>T,private reset:(o:T)=>void,size=20){for(let i=0;i<size;i++)this.pool.push(factory());}get():T{return this.pool.length?this.pool.pop()!:this.factory();}release(obj:T){this.reset(obj);this.pool.push(obj);}get available(){return this.pool.length;}}
