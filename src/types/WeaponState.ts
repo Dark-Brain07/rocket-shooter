@@ -1,0 +1,2 @@
+export interface WeaponState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createWeaponState(id:string):WeaponState{return{id,active:true,timestamp:Date.now(),data:{}};}
