@@ -1,0 +1,2 @@
+export interface PowerUpState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createPowerUpState(id:string):PowerUpState{return{id,active:true,timestamp:Date.now(),data:{}};}
