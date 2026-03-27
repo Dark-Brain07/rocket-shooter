@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{createPowerUpState}from'../types/PowerUpState';
+describe('PowerUpState',()=>{it('creates',()=>{const s=createPowerUpState('t');expect(s.active).toBe(true);});});
