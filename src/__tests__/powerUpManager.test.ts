@@ -1,0 +1,2 @@
+import { describe, it, expect } from 'vitest'; import { PowerUpManager } from '../game/powerups/PowerUpManager';
+describe('PowerUpManager', () => { it('activates', () => { const m = new PowerUpManager(); m.activate('shield', 5000); expect(m.isActive('shield')).toBe(true); }); it('clears all', () => { const m = new PowerUpManager(); m.activate('shield', 5000); m.clearAll(); expect(m.getActiveIds()).toHaveLength(0); }); });
