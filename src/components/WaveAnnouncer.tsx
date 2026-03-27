@@ -1,0 +1,2 @@
+import React from'react';
+export const WaveAnnouncer:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-waveannouncer','data-testid':'waveannouncer'},React.createElement('span',null,label||'WaveAnnouncer'),value!==undefined&&React.createElement('span',null,String(value)));
