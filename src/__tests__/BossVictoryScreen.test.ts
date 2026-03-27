@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossVictoryScreen}from'../game/bosses/BossVictoryScreen';
+describe('BossVictoryScreen',()=>{it('starts inactive',()=>expect(new BossVictoryScreen().isActive()).toBe(false));it('activates',()=>{const x=new BossVictoryScreen();x.activate();expect(x.isActive()).toBe(true);});});
