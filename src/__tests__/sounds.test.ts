@@ -1,0 +1,2 @@
+import { describe, it, expect } from 'vitest'; import { SOUND_EFFECTS } from '../game/audio/sounds';
+describe('sounds', () => { it('has shoot', () => expect(SOUND_EFFECTS.shoot).toBeDefined()); it('has explosion', () => expect(SOUND_EFFECTS.explosion).toBeDefined()); it('valid volume', () => Object.values(SOUND_EFFECTS).forEach(s => expect(s.volume).toBeLessThanOrEqual(1))); });
