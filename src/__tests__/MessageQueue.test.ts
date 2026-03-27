@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{MessageQueue}from'../services/network/MessageQueue';
+describe('MessageQueue',()=>{it('disconnected initially',()=>expect(new MessageQueue().isConnected()).toBe(false));});
