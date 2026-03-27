@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ForegroundRenderer}from'../game/renderer/ForegroundRenderer';
+describe('ForegroundRenderer',()=>{it('initializes',()=>expect(new ForegroundRenderer()).toBeDefined());});
