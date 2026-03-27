@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{MinimapRenderer}from'../game/renderer/MinimapRenderer';
+describe('MinimapRenderer',()=>{it('initializes',()=>expect(new MinimapRenderer()).toBeDefined());});
