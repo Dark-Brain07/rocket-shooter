@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{createNetworkState}from'../types/NetworkState';
+describe('NetworkState',()=>{it('creates',()=>{const s=createNetworkState('t');expect(s.active).toBe(true);});});
