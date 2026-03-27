@@ -1,0 +1,2 @@
+import React from'react';
+export const ComboCounter:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-combocounter','data-testid':'combocounter'},React.createElement('span',null,label||'ComboCounter'),value!==undefined&&React.createElement('span',null,String(value)));
