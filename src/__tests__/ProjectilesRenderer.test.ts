@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ProjectilesRenderer}from'../game/renderer/ProjectilesRenderer';
+describe('ProjectilesRenderer',()=>{it('initializes',()=>expect(new ProjectilesRenderer()).toBeDefined());});
