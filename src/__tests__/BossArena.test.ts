@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossArena}from'../game/bosses/BossArena';
+describe('BossArena',()=>{it('starts inactive',()=>expect(new BossArena().isActive()).toBe(false));it('activates',()=>{const x=new BossArena();x.activate();expect(x.isActive()).toBe(true);});});
