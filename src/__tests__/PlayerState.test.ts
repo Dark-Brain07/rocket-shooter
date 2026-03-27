@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{createPlayerState}from'../types/PlayerState';
+describe('PlayerState',()=>{it('creates',()=>{const s=createPlayerState('t');expect(s.active).toBe(true);});});
