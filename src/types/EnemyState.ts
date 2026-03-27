@@ -1,0 +1,2 @@
+export interface EnemyState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createEnemyState(id:string):EnemyState{return{id,active:true,timestamp:Date.now(),data:{}};}
