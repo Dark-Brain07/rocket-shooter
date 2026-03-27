@@ -1,0 +1,10 @@
+{
+  "app.title": "Rocket Shooter",
+  "menu.play": "Jouer",
+  "menu.connect": "Connecter",
+  "game.score": "Score",
+  "game.wave": "Vague",
+  "game.lives": "Vies",
+  "game.over": "Fin de Jeu",
+  "game.restart": "Rejouer"
+}
