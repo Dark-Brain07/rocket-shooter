@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{CPUProfiler}from'../utils/profiling/CPUProfiler';
+describe('CPUProfiler',()=>{it('records',()=>{const x=new CPUProfiler();x.start();x.record(10);expect(x.stop().count).toBe(1);});});
