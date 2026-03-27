@@ -1,0 +1,2 @@
+import { describe, it, expect } from 'vitest'; import { WAVES, getWave } from '../game/waves/WaveConfig';
+describe('wave config', () => { it('has 10 waves', () => expect(WAVES).toHaveLength(10)); it('wave 5 is boss', () => expect(getWave(5).bossWave).toBe(true)); it('wave 10 is boss', () => expect(getWave(10).bossWave).toBe(true)); it('generates beyond 10', () => { const w = getWave(15); expect(w.wave).toBe(15); expect(w.enemies).toBeGreaterThan(20); }); });
