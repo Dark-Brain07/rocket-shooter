@@ -1,0 +1,2 @@
+import React from'react';
+export const ShieldRecharge:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-shieldrecharge','data-testid':'shieldrecharge'},React.createElement('span',null,label||'ShieldRecharge'),value!==undefined&&React.createElement('span',null,String(value)));
