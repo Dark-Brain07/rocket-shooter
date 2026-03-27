@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{SpringPhysics}from'../game/animation/SpringPhysics';
+describe('SpringPhysics',()=>{it('starts stopped',()=>expect(new SpringPhysics().isPlaying()).toBe(false));it('plays',()=>{const x=new SpringPhysics();x.play();expect(x.isPlaying()).toBe(true);});});
