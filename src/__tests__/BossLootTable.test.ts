@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossLootTable}from'../game/bosses/BossLootTable';
+describe('BossLootTable',()=>{it('starts inactive',()=>expect(new BossLootTable().isActive()).toBe(false));it('activates',()=>{const x=new BossLootTable();x.activate();expect(x.isActive()).toBe(true);});});
