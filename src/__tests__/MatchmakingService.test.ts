@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{MatchmakingService}from'../services/network/MatchmakingService';
+describe('MatchmakingService',()=>{it('disconnected initially',()=>expect(new MatchmakingService().isConnected()).toBe(false));});
