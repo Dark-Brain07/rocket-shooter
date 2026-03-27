@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{FSMController}from'../game/ai/FSMController';
+describe('FSMController',()=>{it('creates',()=>expect(new FSMController()).toBeDefined());it('toggles',()=>{const x=new FSMController();x.disable();expect(x.isEnabled()).toBe(false);});});
