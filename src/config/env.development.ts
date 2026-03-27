@@ -1,0 +1,1 @@
+export const DEVELOPMENT_CONFIG={env:'development',debug:true,logLevel:'debug'} as const;
