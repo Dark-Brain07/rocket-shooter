@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{SyncManager}from'../services/network/SyncManager';
+describe('SyncManager',()=>{it('disconnected initially',()=>expect(new SyncManager().isConnected()).toBe(false));});
