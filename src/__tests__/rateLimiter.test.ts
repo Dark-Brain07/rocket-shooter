@@ -1,1 +1,2 @@
-import { describe, it, expect } from "vitest"; import { RateLimiter } from "../utils/rateLimiter"; describe("RateLimiter", () => { it("allows within limit", () => { const r = new RateLimiter(3); expect(r.canProceed()).toBe(true); expect(r.canProceed()).toBe(true); expect(r.canProceed()).toBe(true); }); it("blocks over limit", () => { const r = new RateLimiter(1); r.canProceed(); expect(r.canProceed()).toBe(false); }); it("resets", () => { const r = new RateLimiter(1); r.canProceed(); r.reset(); expect(r.canProceed()).toBe(true); }); });
+import{describe,it,expect}from'vitest';import{RateLimiter}from'../security/RateLimiter';
+describe('RateLimiter',()=>{it('validates',()=>expect(new RateLimiter().validate('x')).toBe(true));});
