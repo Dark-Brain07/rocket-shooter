@@ -1,0 +1,2 @@
+export interface ProjectileType{id:string;name:string;damage:number;speed:number;size:number;color:string;piercing:boolean;}
+export const PROJECTILES:Record<string,ProjectileType>={laser:{id:'laser',name:'Laser',damage:1,speed:10,size:3,color:'#00ff88',piercing:false},plasma:{id:'plasma',name:'Plasma',damage:2,speed:7,size:5,color:'#ff44ff',piercing:false},missile:{id:'missile',name:'Missile',damage:5,speed:5,size:8,color:'#ff8800',piercing:true},beam:{id:'beam',name:'Beam',damage:3,speed:15,size:2,color:'#00ffff',piercing:true}};
