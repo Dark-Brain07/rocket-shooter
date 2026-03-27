@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ReplayRecorder}from'../services/network/ReplayRecorder';
+describe('ReplayRecorder',()=>{it('disconnected initially',()=>expect(new ReplayRecorder().isConnected()).toBe(false));});
