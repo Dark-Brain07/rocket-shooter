@@ -1,0 +1,10 @@
+{
+  "app.title": "Rocket Shooter",
+  "menu.play": "Oyna",
+  "menu.connect": "Bagla",
+  "game.score": "Skor",
+  "game.wave": "Dalga",
+  "game.lives": "Can",
+  "game.over": "Oyun Bitti",
+  "game.restart": "Tekrar"
+}
