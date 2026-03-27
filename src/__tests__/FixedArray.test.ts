@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{FixedArray}from'../utils/structures/FixedArray';
+describe('FixedArray',()=>{it('starts empty',()=>expect(new FixedArray().isEmpty()).toBe(true));it('adds',()=>{const s=new FixedArray();s.add(1);expect(s.size).toBe(1);});});
