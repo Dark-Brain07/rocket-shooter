@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{WebSocketClient}from'../services/network/WebSocketClient';
+describe('WebSocketClient',()=>{it('disconnected initially',()=>expect(new WebSocketClient().isConnected()).toBe(false));});
