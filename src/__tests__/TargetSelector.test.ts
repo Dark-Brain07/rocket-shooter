@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{TargetSelector}from'../game/ai/TargetSelector';
+describe('TargetSelector',()=>{it('creates',()=>expect(new TargetSelector()).toBeDefined());it('toggles',()=>{const x=new TargetSelector();x.disable();expect(x.isEnabled()).toBe(false);});});
