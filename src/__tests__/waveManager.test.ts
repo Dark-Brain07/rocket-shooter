@@ -1,0 +1,2 @@
+import { describe, it, expect } from 'vitest'; import { WaveManager } from '../game/waves/WaveManager';
+describe('WaveManager', () => { it('starts at wave 1', () => { const wm = new WaveManager(); wm.start(); expect(wm.getWaveNumber()).toBe(1); }); it('advances waves', () => { const wm = new WaveManager(); wm.start(); wm.nextWave(); expect(wm.getWaveNumber()).toBe(2); }); it('resets', () => { const wm = new WaveManager(); wm.start(); wm.reset(); expect(wm.getWaveNumber()).toBe(0); }); });
