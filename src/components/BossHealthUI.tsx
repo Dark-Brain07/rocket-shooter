@@ -1,0 +1,2 @@
+import React from'react';
+export const BossHealthUI:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-bosshealthui','data-testid':'bosshealthui'},React.createElement('span',null,label||'BossHealthUI'),value!==undefined&&React.createElement('span',null,String(value)));
