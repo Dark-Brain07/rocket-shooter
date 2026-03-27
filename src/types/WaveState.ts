@@ -1,0 +1,2 @@
+export interface WaveState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createWaveState(id:string):WaveState{return{id,active:true,timestamp:Date.now(),data:{}};}
