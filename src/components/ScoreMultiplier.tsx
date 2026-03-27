@@ -1,0 +1,2 @@
+import React from'react';
+export const ScoreMultiplier:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-scoremultiplier','data-testid':'scoremultiplier'},React.createElement('span',null,label||'ScoreMultiplier'),value!==undefined&&React.createElement('span',null,String(value)));
