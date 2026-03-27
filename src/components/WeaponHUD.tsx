@@ -1,0 +1,2 @@
+import React from'react';
+export const WeaponHUD:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-weaponhud','data-testid':'weaponhud'},React.createElement('span',null,label||'WeaponHUD'),value!==undefined&&React.createElement('span',null,String(value)));
