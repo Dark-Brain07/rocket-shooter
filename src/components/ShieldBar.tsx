@@ -1,0 +1,2 @@
+import React from'react';
+export const ShieldBar:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-shieldbar','data-testid':'shieldbar'},React.createElement('span',null,label||'ShieldBar'),value!==undefined&&React.createElement('span',null,String(value)));
