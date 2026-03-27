@@ -1,0 +1,1 @@
+export const STAGING_CONFIG={env:'staging',debug:false,logLevel:'debug'} as const;
