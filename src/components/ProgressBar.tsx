@@ -1,0 +1,2 @@
+import React from'react';
+export const ProgressBar:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-progressbar','data-testid':'progressbar'},React.createElement('span',null,label||'ProgressBar'),value!==undefined&&React.createElement('span',null,String(value)));
