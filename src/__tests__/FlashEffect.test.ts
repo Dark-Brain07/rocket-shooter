@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{FlashEffect}from'../game/animation/FlashEffect';
+describe('FlashEffect',()=>{it('starts stopped',()=>expect(new FlashEffect().isPlaying()).toBe(false));it('plays',()=>{const x=new FlashEffect();x.play();expect(x.isPlaying()).toBe(true);});});
