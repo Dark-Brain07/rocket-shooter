@@ -1,0 +1,2 @@
+export interface PlayerState{readonly id:string;active:boolean;timestamp:number;data:Record<string,any>;}
+export function createPlayerState(id:string):PlayerState{return{id,active:true,timestamp:Date.now(),data:{}};}
