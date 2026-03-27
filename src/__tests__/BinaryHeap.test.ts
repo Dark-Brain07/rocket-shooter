@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BinaryHeap}from'../utils/structures/BinaryHeap';
+describe('BinaryHeap',()=>{it('starts empty',()=>expect(new BinaryHeap().isEmpty()).toBe(true));it('adds',()=>{const s=new BinaryHeap();s.add(1);expect(s.size).toBe(1);});});
