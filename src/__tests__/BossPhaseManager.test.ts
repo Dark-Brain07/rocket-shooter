@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossPhaseManager}from'../game/bosses/BossPhaseManager';
+describe('BossPhaseManager',()=>{it('starts inactive',()=>expect(new BossPhaseManager().isActive()).toBe(false));it('activates',()=>{const x=new BossPhaseManager();x.activate();expect(x.isActive()).toBe(true);});});
