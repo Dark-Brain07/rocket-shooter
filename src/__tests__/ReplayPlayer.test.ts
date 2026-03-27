@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ReplayPlayer}from'../services/network/ReplayPlayer';
+describe('ReplayPlayer',()=>{it('disconnected initially',()=>expect(new ReplayPlayer().isConnected()).toBe(false));});
