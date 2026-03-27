@@ -1,0 +1,2 @@
+import React from'react';
+export const OverheatGauge:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-overheatgauge','data-testid':'overheatgauge'},React.createElement('span',null,label||'OverheatGauge'),value!==undefined&&React.createElement('span',null,String(value)));
