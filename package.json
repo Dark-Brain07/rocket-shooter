@@ -1,48 +1,48 @@
 {
-    "name":  "@rajuice/rocket-shooter",
-    "version":  "1.3.0",
-    "type":  "module",
-    "description":  "Rocket Shooter - Epic space shooter game on Stacks blockchain",
-    "author":  "Dark-Brain07",
-    "license":  "MIT",
-    "repository":  {
-                       "type":  "git",
-                       "url":  "https://github.com/Dark-Brain07/rocket-shooter.git"
-                   },
-    "homepage":  "https://github.com/Dark-Brain07/rocket-shooter",
-    "bugs":  {
-                 "url":  "https://github.com/Dark-Brain07/rocket-shooter/issues"
-             },
-    "keywords":  [
-                     "stacks",
-                     "web3",
-                     "game",
-                     "space-shooter",
-                     "blockchain",
-                     "bitcoin",
-                     "stx"
-                 ],
-    "scripts":  {
-                    "dev":  "vite",
-                    "build":  "vite build",
-                    "preview":  "vite preview"
-                },
-    "dependencies":  {
-                         "@stacks/connect":  "^8.2.5",
-                         "@stacks/network":  "^7.3.1",
-                         "@stacks/transactions":  "^7.3.1",
-                         "lucide-react":  "^0.263.1",
-                         "react":  "^18.2.0",
-                         "react-dom":  "^18.2.0"
-                     },
-    "devDependencies":  {
-                            "@types/react":  "^18.2.43",
-                            "@types/react-dom":  "^18.2.17",
-                            "@vitejs/plugin-react":  "^4.2.1",
-                            "autoprefixer":  "^10.4.16",
-                            "postcss":  "^8.4.32",
-                            "tailwindcss":  "^3.4.0",
-                            "typescript":  "^5.2.2",
-                            "vite":  "^5.0.8"
-                        }
+  "name": "@rajuice/rocket-shooter",
+  "version": "1.4.0",
+  "type": "module",
+  "description": "Rocket Shooter - Epic space shooter game on Stacks blockchain",
+  "author": "Dark-Brain07",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dark-Brain07/rocket-shooter.git"
+  },
+  "homepage": "https://github.com/Dark-Brain07/rocket-shooter",
+  "bugs": {
+    "url": "https://github.com/Dark-Brain07/rocket-shooter/issues"
+  },
+  "keywords": [
+    "stacks",
+    "web3",
+    "game",
+    "space-shooter",
+    "blockchain",
+    "bitcoin",
+    "stx"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@stacks/connect": "^8.2.5",
+    "@stacks/network": "^7.3.1",
+    "@stacks/transactions": "^7.3.1",
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
 }
