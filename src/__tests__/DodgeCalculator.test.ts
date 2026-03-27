@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{DodgeCalculator}from'../game/ai/DodgeCalculator';
+describe('DodgeCalculator',()=>{it('creates',()=>expect(new DodgeCalculator()).toBeDefined());it('toggles',()=>{const x=new DodgeCalculator();x.disable();expect(x.isEnabled()).toBe(false);});});
