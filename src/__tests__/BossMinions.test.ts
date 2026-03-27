@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossMinions}from'../game/bosses/BossMinions';
+describe('BossMinions',()=>{it('starts inactive',()=>expect(new BossMinions().isActive()).toBe(false));it('activates',()=>{const x=new BossMinions();x.activate();expect(x.isActive()).toBe(true);});});
