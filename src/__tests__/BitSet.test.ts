@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BitSet}from'../utils/structures/BitSet';
+describe('BitSet',()=>{it('starts empty',()=>expect(new BitSet().isEmpty()).toBe(true));it('adds',()=>{const s=new BitSet();s.add(1);expect(s.size).toBe(1);});});
