@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossDialogue}from'../game/bosses/BossDialogue';
+describe('BossDialogue',()=>{it('starts inactive',()=>expect(new BossDialogue().isActive()).toBe(false));it('activates',()=>{const x=new BossDialogue();x.activate();expect(x.isActive()).toBe(true);});});
