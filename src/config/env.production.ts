@@ -1,0 +1,1 @@
+export const PRODUCTION_CONFIG={env:'production',debug:false,logLevel:'error'} as const;
