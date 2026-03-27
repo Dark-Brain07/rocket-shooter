@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{NavigationGrid}from'../game/ai/NavigationGrid';
+describe('NavigationGrid',()=>{it('creates',()=>expect(new NavigationGrid()).toBeDefined());it('toggles',()=>{const x=new NavigationGrid();x.disable();expect(x.isEnabled()).toBe(false);});});
