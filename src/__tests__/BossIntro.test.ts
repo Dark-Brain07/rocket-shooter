@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BossIntro}from'../game/bosses/BossIntro';
+describe('BossIntro',()=>{it('starts inactive',()=>expect(new BossIntro().isActive()).toBe(false));it('activates',()=>{const x=new BossIntro();x.activate();expect(x.isActive()).toBe(true);});});
