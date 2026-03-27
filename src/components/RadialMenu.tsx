@@ -1,0 +1,2 @@
+import React from'react';
+export const RadialMenu:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-radialmenu','data-testid':'radialmenu'},React.createElement('span',null,label||'RadialMenu'),value!==undefined&&React.createElement('span',null,String(value)));
