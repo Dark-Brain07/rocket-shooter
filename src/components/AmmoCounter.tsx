@@ -1,0 +1,2 @@
+import React from'react';
+export const AmmoCounter:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-ammocounter','data-testid':'ammocounter'},React.createElement('span',null,label||'AmmoCounter'),value!==undefined&&React.createElement('span',null,String(value)));
