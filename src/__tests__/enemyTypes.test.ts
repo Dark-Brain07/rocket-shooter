@@ -1,0 +1,2 @@
+import { describe, it, expect } from 'vitest'; import { ENEMY_TYPES, getEnemyType } from '../game/enemies/EnemyTypes';
+describe('enemy types', () => { it('has 6 types', () => expect(Object.keys(ENEMY_TYPES)).toHaveLength(6)); it('finds by id', () => expect(getEnemyType('tank').name).toBe('Cruiser')); it('defaults to basic', () => expect(getEnemyType('unknown').id).toBe('basic')); it('tank has most hp', () => expect(getEnemyType('tank').hp).toBeGreaterThan(getEnemyType('basic').hp)); });
