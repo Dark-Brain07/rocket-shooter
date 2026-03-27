@@ -1,0 +1,2 @@
+import { describe, it, expect } from 'vitest'; import { POWERUPS, getPowerUpById, getRandomPowerUp } from '../game/powerups/definitions';
+describe('power-ups', () => { it('has 6', () => expect(POWERUPS).toHaveLength(6)); it('finds by id', () => expect(getPowerUpById('shield')?.name).toBe('Energy Shield')); it('random is valid', () => expect(POWERUPS).toContain(getRandomPowerUp())); });
