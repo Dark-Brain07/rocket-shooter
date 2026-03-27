@@ -1,0 +1,1 @@
+export { loadSave, writeSave, resetSave, exportSave, importSave } from './SaveManager'; export type { SaveData } from './SaveManager';
