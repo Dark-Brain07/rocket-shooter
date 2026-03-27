@@ -1,0 +1,2 @@
+import React from'react';
+export const Tooltip:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-tooltip','data-testid':'tooltip'},React.createElement('span',null,label||'Tooltip'),value!==undefined&&React.createElement('span',null,String(value)));
