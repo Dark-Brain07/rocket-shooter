@@ -1,0 +1,2 @@
+import React from'react';
+export const WaveProgress:React.FC<{value?:any;label?:string}>=({value,label})=>React.createElement('div',{className:'ui-waveprogress','data-testid':'waveprogress'},React.createElement('span',null,label||'WaveProgress'),value!==undefined&&React.createElement('span',null,String(value)));
