@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{SpritesRenderer}from'../game/renderer/SpritesRenderer';
+describe('SpritesRenderer',()=>{it('initializes',()=>expect(new SpritesRenderer()).toBeDefined());});
