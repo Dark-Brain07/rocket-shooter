@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{RenderProfiler}from'../utils/profiling/RenderProfiler';
+describe('RenderProfiler',()=>{it('records',()=>{const x=new RenderProfiler();x.start();x.record(10);expect(x.stop().count).toBe(1);});});
