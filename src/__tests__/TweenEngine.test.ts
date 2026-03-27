@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{TweenEngine}from'../game/animation/TweenEngine';
+describe('TweenEngine',()=>{it('starts stopped',()=>expect(new TweenEngine().isPlaying()).toBe(false));it('plays',()=>{const x=new TweenEngine();x.play();expect(x.isPlaying()).toBe(true);});});
