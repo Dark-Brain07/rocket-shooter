@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{SpatialAudio}from'../audio/SpatialAudio';
+describe('SpatialAudio',()=>{it('defaults gain 1',()=>expect(new SpatialAudio().getGain()).toBe(1));it('mutes',()=>{const x=new SpatialAudio();x.mute();expect(x.isMuted()).toBe(true);});});
