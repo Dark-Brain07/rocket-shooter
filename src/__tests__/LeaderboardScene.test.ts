@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{LeaderboardScene}from'../scenes/LeaderboardScene';
+describe('LeaderboardScene',()=>{it('starts inactive',()=>expect(new LeaderboardScene().isActive()).toBe(false));it('activates',()=>{const s=new LeaderboardScene();s.onEnter();expect(s.isActive()).toBe(true);});});
