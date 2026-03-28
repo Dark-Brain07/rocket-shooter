@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{EventTracker}from'../analytics/EventTracker';
+describe('EventTracker',()=>{it('tracks',()=>{const x=new EventTracker();x.track('click');expect(x.getMetrics().total).toBe(1);});it('flushes',()=>{const x=new EventTracker();x.track('a');x.flush();expect(x.getData()).toHaveLength(0);});});
