@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Analyzer}from'../audio/Analyzer';
+describe('Analyzer',()=>{it('defaults gain 1',()=>expect(new Analyzer().getGain()).toBe(1));it('mutes',()=>{const x=new Analyzer();x.mute();expect(x.isMuted()).toBe(true);});});
