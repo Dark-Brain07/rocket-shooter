@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';
+describe('perf 2',()=>{it('sort under 50ms',()=>{const t=Date.now();Array.from({length:10000},(_,i)=>i).sort((a,b)=>b-a);expect(Date.now()-t).toBeLessThan(50);});});
