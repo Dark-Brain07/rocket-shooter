@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{LoadingScene}from'../scenes/LoadingScene';
+describe('LoadingScene',()=>{it('starts inactive',()=>expect(new LoadingScene().isActive()).toBe(false));it('activates',()=>{const s=new LoadingScene();s.onEnter();expect(s.isActive()).toBe(true);});});
