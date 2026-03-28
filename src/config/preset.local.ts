@@ -1,0 +1,1 @@
+export const LOCAL_PRESET={env:'local',debug:true,timeout:30000} as const;
