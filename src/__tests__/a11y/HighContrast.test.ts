@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{HighContrast}from'../a11y/HighContrast';
+describe('HighContrast',()=>{it('toggles',()=>{const x=new HighContrast();x.toggle();expect(x.isActive()).toBe(true);x.toggle();expect(x.isActive()).toBe(false);});});
