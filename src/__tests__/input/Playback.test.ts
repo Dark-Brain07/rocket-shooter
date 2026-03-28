@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Playback}from'../input/Playback';
+describe('Playback',()=>{it('records events',()=>{const x=new Playback();x.start();x.record({type:'tap'});expect(x.getCount()).toBe(1);});});
