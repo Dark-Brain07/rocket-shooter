@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{GamepadAdapter}from'../input/GamepadAdapter';
+describe('GamepadAdapter',()=>{it('records events',()=>{const x=new GamepadAdapter();x.start();x.record({type:'tap'});expect(x.getCount()).toBe(1);});});
