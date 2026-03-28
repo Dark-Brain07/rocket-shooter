@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{SessionRecorder}from'../analytics/SessionRecorder';
+describe('SessionRecorder',()=>{it('tracks',()=>{const x=new SessionRecorder();x.track('click');expect(x.getMetrics().total).toBe(1);});it('flushes',()=>{const x=new SessionRecorder();x.track('a');x.flush();expect(x.getData()).toHaveLength(0);});});
