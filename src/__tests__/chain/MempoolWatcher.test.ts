@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{MempoolWatcher}from'../chain/MempoolWatcher';
+describe('MempoolWatcher',()=>{it('defaults mainnet',()=>expect(new MempoolWatcher().getNet()).toBe('mainnet'));});
