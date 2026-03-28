@@ -1,0 +1,2 @@
+const B=import.meta.env.VITE_API_URL||'';
+export const friendApi={async list(p?:Record<string,string>){return fetch(B+'/v2/friend'+(p?'?'+new URLSearchParams(p):'')).then(r=>r.json());},async get(id:string){return fetch(B+'/v2/friend/'+id).then(r=>r.json());},async create(body:any){return fetch(B+'/v2/friend',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>r.json());}};
