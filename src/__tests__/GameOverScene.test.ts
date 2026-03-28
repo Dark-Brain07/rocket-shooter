@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{GameOverScene}from'../scenes/GameOverScene';
+describe('GameOverScene',()=>{it('starts inactive',()=>expect(new GameOverScene().isActive()).toBe(false));it('activates',()=>{const s=new GameOverScene();s.onEnter();expect(s.isActive()).toBe(true);});});
