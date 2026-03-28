@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{AriaManager}from'../a11y/AriaManager';
+describe('AriaManager',()=>{it('toggles',()=>{const x=new AriaManager();x.toggle();expect(x.isActive()).toBe(true);x.toggle();expect(x.isActive()).toBe(false);});});
