@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{TextScaler}from'../a11y/TextScaler';
+describe('TextScaler',()=>{it('toggles',()=>{const x=new TextScaler();x.toggle();expect(x.isActive()).toBe(true);x.toggle();expect(x.isActive()).toBe(false);});});
