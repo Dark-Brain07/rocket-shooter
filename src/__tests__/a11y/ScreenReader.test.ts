@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ScreenReader}from'../a11y/ScreenReader';
+describe('ScreenReader',()=>{it('toggles',()=>{const x=new ScreenReader();x.toggle();expect(x.isActive()).toBe(true);x.toggle();expect(x.isActive()).toBe(false);});});
