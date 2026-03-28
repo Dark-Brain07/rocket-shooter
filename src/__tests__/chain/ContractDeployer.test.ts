@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ContractDeployer}from'../chain/ContractDeployer';
+describe('ContractDeployer',()=>{it('defaults mainnet',()=>expect(new ContractDeployer().getNet()).toBe('mainnet'));});
