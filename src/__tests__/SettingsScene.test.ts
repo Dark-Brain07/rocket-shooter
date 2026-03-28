@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{SettingsScene}from'../scenes/SettingsScene';
+describe('SettingsScene',()=>{it('starts inactive',()=>expect(new SettingsScene().isActive()).toBe(false));it('activates',()=>{const s=new SettingsScene();s.onEnter();expect(s.isActive()).toBe(true);});});
