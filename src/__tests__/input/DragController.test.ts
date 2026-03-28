@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{DragController}from'../input/DragController';
+describe('DragController',()=>{it('records events',()=>{const x=new DragController();x.start();x.record({type:'tap'});expect(x.getCount()).toBe(1);});});
