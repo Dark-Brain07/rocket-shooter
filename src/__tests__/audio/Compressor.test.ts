@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Compressor}from'../audio/Compressor';
+describe('Compressor',()=>{it('defaults gain 1',()=>expect(new Compressor().getGain()).toBe(1));it('mutes',()=>{const x=new Compressor();x.mute();expect(x.isMuted()).toBe(true);});});
