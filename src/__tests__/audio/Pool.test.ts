@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Pool}from'../audio/Pool';
+describe('Pool',()=>{it('defaults gain 1',()=>expect(new Pool().getGain()).toBe(1));it('mutes',()=>{const x=new Pool();x.mute();expect(x.isMuted()).toBe(true);});});
