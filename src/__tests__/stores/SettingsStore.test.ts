@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{SettingsStore}from'../stores/SettingsStore';
+describe('SettingsStore',()=>{it('stores data',()=>{const x=new SettingsStore();x.set('a',1);expect(x.get('a')).toBe(1);});});
