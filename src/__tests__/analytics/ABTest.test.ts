@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ABTest}from'../analytics/ABTest';
+describe('ABTest',()=>{it('tracks',()=>{const x=new ABTest();x.track('click');expect(x.getMetrics().total).toBe(1);});it('flushes',()=>{const x=new ABTest();x.track('a');x.flush();expect(x.getData()).toHaveLength(0);});});
