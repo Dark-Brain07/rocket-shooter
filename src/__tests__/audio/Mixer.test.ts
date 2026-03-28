@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Mixer}from'../audio/Mixer';
+describe('Mixer',()=>{it('defaults gain 1',()=>expect(new Mixer().getGain()).toBe(1));it('mutes',()=>{const x=new Mixer();x.mute();expect(x.isMuted()).toBe(true);});});
