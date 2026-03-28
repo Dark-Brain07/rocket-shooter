@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Filter}from'../audio/Filter';
+describe('Filter',()=>{it('defaults gain 1',()=>expect(new Filter().getGain()).toBe(1));it('mutes',()=>{const x=new Filter();x.mute();expect(x.isMuted()).toBe(true);});});
