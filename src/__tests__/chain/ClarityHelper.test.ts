@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ClarityHelper}from'../chain/ClarityHelper';
+describe('ClarityHelper',()=>{it('defaults mainnet',()=>expect(new ClarityHelper().getNet()).toBe('mainnet'));});
