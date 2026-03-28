@@ -1,0 +1,2 @@
+const B=import.meta.env.VITE_API_URL||'';
+export const chatApi={async list(p?:Record<string,string>){return fetch(B+'/v2/chat'+(p?'?'+new URLSearchParams(p):'')).then(r=>r.json());},async get(id:string){return fetch(B+'/v2/chat/'+id).then(r=>r.json());},async create(body:any){return fetch(B+'/v2/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>r.json());}};
