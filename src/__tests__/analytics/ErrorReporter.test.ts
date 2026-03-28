@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ErrorReporter}from'../analytics/ErrorReporter';
+describe('ErrorReporter',()=>{it('tracks',()=>{const x=new ErrorReporter();x.track('click');expect(x.getMetrics().total).toBe(1);});it('flushes',()=>{const x=new ErrorReporter();x.track('a');x.flush();expect(x.getData()).toHaveLength(0);});});
