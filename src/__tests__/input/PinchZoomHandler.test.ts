@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{PinchZoomHandler}from'../input/PinchZoomHandler';
+describe('PinchZoomHandler',()=>{it('records events',()=>{const x=new PinchZoomHandler();x.start();x.record({type:'tap'});expect(x.getCount()).toBe(1);});});
