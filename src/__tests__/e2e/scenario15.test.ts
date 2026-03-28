@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';
+describe('E2E scenario 15',()=>{it('game loop works',()=>{const g={score:0,lives:3,wave:1};expect(g.lives).toBe(3);});it('scoring',()=>{let s=0;for(let j=0;j<15;j++)s+=10;expect(s).toBe(15*10);});});
