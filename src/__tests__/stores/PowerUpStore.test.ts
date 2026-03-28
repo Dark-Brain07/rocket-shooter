@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{PowerUpStore}from'../stores/PowerUpStore';
+describe('PowerUpStore',()=>{it('stores data',()=>{const x=new PowerUpStore();x.set('a',1);expect(x.get('a')).toBe(1);});});
