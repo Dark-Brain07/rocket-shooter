@@ -1,0 +1,1 @@
+export const QA_PRESET={env:'qa',debug:false,timeout:30000} as const;
