@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{TouchHandler}from'../input/TouchHandler';
+describe('TouchHandler',()=>{it('records events',()=>{const x=new TouchHandler();x.start();x.record({type:'tap'});expect(x.getCount()).toBe(1);});});
