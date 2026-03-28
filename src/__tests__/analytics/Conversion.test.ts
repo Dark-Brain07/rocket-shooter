@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Conversion}from'../analytics/Conversion';
+describe('Conversion',()=>{it('tracks',()=>{const x=new Conversion();x.track('click');expect(x.getMetrics().total).toBe(1);});it('flushes',()=>{const x=new Conversion();x.track('a');x.flush();expect(x.getData()).toHaveLength(0);});});
