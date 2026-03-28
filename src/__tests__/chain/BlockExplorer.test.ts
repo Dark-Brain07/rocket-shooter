@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{BlockExplorer}from'../chain/BlockExplorer';
+describe('BlockExplorer',()=>{it('defaults mainnet',()=>expect(new BlockExplorer().getNet()).toBe('mainnet'));});
