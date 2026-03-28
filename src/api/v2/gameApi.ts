@@ -1,0 +1,2 @@
+const B=import.meta.env.VITE_API_URL||'';
+export const gameApi={async list(p?:Record<string,string>){return fetch(B+'/v2/game'+(p?'?'+new URLSearchParams(p):'')).then(r=>r.json());},async get(id:string){return fetch(B+'/v2/game/'+id).then(r=>r.json());},async create(body:any){return fetch(B+'/v2/game',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>r.json());}};
