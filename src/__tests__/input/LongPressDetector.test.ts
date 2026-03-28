@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{LongPressDetector}from'../input/LongPressDetector';
+describe('LongPressDetector',()=>{it('records events',()=>{const x=new LongPressDetector();x.start();x.record({type:'tap'});expect(x.getCount()).toBe(1);});});
