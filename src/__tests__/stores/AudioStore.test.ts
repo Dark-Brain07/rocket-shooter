@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{AudioStore}from'../stores/AudioStore';
+describe('AudioStore',()=>{it('stores data',()=>{const x=new AudioStore();x.set('a',1);expect(x.get('a')).toBe(1);});});
