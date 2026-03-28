@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{UploaderStep}from'../pipeline/UploaderStep';
+describe('UploaderStep',()=>{it('runs',async()=>{const x=new UploaderStep();x.configure({a:1});expect((await x.run()).ok).toBe(true);});});
