@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{FeatureUsage}from'../analytics/FeatureUsage';
+describe('FeatureUsage',()=>{it('tracks',()=>{const x=new FeatureUsage();x.track('click');expect(x.getMetrics().total).toBe(1);});it('flushes',()=>{const x=new FeatureUsage();x.track('a');x.flush();expect(x.getData()).toHaveLength(0);});});
