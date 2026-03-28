@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{FormatterStep}from'../pipeline/FormatterStep';
+describe('FormatterStep',()=>{it('runs',async()=>{const x=new FormatterStep();x.configure({a:1});expect((await x.run()).ok).toBe(true);});});
