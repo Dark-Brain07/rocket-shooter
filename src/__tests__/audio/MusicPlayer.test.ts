@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{MusicPlayer}from'../audio/MusicPlayer';
+describe('MusicPlayer',()=>{it('defaults gain 1',()=>expect(new MusicPlayer().getGain()).toBe(1));it('mutes',()=>{const x=new MusicPlayer();x.mute();expect(x.isMuted()).toBe(true);});});
