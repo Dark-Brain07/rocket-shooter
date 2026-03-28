@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{CreditsScene}from'../scenes/CreditsScene';
+describe('CreditsScene',()=>{it('starts inactive',()=>expect(new CreditsScene().isActive()).toBe(false));it('activates',()=>{const s=new CreditsScene();s.onEnter();expect(s.isActive()).toBe(true);});});
