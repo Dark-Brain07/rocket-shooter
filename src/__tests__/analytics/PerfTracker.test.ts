@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{PerfTracker}from'../analytics/PerfTracker';
+describe('PerfTracker',()=>{it('tracks',()=>{const x=new PerfTracker();x.track('click');expect(x.getMetrics().total).toBe(1);});it('flushes',()=>{const x=new PerfTracker();x.track('a');x.flush();expect(x.getData()).toHaveLength(0);});});
