@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{KeyboardNav}from'../a11y/KeyboardNav';
+describe('KeyboardNav',()=>{it('toggles',()=>{const x=new KeyboardNav();x.toggle();expect(x.isActive()).toBe(true);x.toggle();expect(x.isActive()).toBe(false);});});
