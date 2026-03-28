@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{PointerLockManager}from'../input/PointerLockManager';
+describe('PointerLockManager',()=>{it('records events',()=>{const x=new PointerLockManager();x.start();x.record({type:'tap'});expect(x.getCount()).toBe(1);});});
