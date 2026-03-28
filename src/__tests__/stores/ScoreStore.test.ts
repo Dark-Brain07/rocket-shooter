@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{ScoreStore}from'../stores/ScoreStore';
+describe('ScoreStore',()=>{it('stores data',()=>{const x=new ScoreStore();x.set('a',1);expect(x.get('a')).toBe(1);});});
