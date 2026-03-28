@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{PostConditions}from'../chain/PostConditions';
+describe('PostConditions',()=>{it('defaults mainnet',()=>expect(new PostConditions().getNet()).toBe('mainnet'));});
