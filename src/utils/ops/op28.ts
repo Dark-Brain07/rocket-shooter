@@ -1,0 +1,2 @@
+export function pipe28<T>(...fns:Array<(v:T)=>T>):(v:T)=>T{return v=>fns.reduce((a,fn)=>fn(a),v);}
+export function memo28<T extends(...a:any[])=>any>(fn:T):T{const c=new Map();return((...a:any[])=>{const k=JSON.stringify(a);if(c.has(k))return c.get(k);const r=fn(...a);c.set(k,r);return r;})as T;}
