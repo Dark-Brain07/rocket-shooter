@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{TranspilerStep}from'../pipeline/TranspilerStep';
+describe('TranspilerStep',()=>{it('runs',async()=>{const x=new TranspilerStep();x.configure({a:1});expect((await x.run()).ok).toBe(true);});});
