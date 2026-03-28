@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{StacksAdapter}from'../chain/StacksAdapter';
+describe('StacksAdapter',()=>{it('defaults mainnet',()=>expect(new StacksAdapter().getNet()).toBe('mainnet'));});
