@@ -1,0 +1,2 @@
+import{describe,it,expect}from'vitest';import{Channel}from'../audio/Channel';
+describe('Channel',()=>{it('defaults gain 1',()=>expect(new Channel().getGain()).toBe(1));it('mutes',()=>{const x=new Channel();x.mute();expect(x.isMuted()).toBe(true);});});
