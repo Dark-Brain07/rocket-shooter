@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestTimer}from"../../game/quests/QuestTimer";
+describe("QuestTimer",()=>{it("ok",()=>expect(new QuestTimer()).toBeDefined());it("toggle",()=>{const x=new QuestTimer();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestTimer();x.set("a",1);expect(x.get("a")).toBe(1);});});
