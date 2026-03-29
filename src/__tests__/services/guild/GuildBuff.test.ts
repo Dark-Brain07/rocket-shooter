@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildBuff}from"../../services/guild/GuildBuff";
+describe("GuildBuff",()=>{it("ok",()=>expect(new GuildBuff()).toBeDefined());it("toggle",()=>{const x=new GuildBuff();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildBuff();x.set("a",1);expect(x.get("a")).toBe(1);});});
