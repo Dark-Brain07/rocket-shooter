@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Sandstorm}from"../../game/weather/Sandstorm";
+describe("Sandstorm",()=>{it("ok",()=>expect(new Sandstorm()).toBeDefined());it("toggle",()=>{const x=new Sandstorm();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Sandstorm();x.set("a",1);expect(x.get("a")).toBe(1);});});
