@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillTooltip}from"../../game/skills/SkillTooltip";
+describe("SkillTooltip",()=>{it("ok",()=>expect(new SkillTooltip()).toBeDefined());it("toggle",()=>{const x=new SkillTooltip();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillTooltip();x.set("a",1);expect(x.get("a")).toBe(1);});});
