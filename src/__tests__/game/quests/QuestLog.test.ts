@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestLog}from"../../game/quests/QuestLog";
+describe("QuestLog",()=>{it("ok",()=>expect(new QuestLog()).toBeDefined());it("toggle",()=>{const x=new QuestLog();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestLog();x.set("a",1);expect(x.get("a")).toBe(1);});});
