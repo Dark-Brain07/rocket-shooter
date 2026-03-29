@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillPrereq}from"../../game/skills/SkillPrereq";
+describe("SkillPrereq",()=>{it("ok",()=>expect(new SkillPrereq()).toBeDefined());it("toggle",()=>{const x=new SkillPrereq();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillPrereq();x.set("a",1);expect(x.get("a")).toBe(1);});});
