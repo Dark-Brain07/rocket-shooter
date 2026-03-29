@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestDialog}from"../../game/quests/QuestDialog";
+describe("QuestDialog",()=>{it("ok",()=>expect(new QuestDialog()).toBeDefined());it("toggle",()=>{const x=new QuestDialog();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestDialog();x.set("a",1);expect(x.get("a")).toBe(1);});});
