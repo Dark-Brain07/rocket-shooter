@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Ingredient}from"../../game/crafting/Ingredient";
+describe("Ingredient",()=>{it("ok",()=>expect(new Ingredient()).toBeDefined());it("toggle",()=>{const x=new Ingredient();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Ingredient();x.set("a",1);expect(x.get("a")).toBe(1);});});
