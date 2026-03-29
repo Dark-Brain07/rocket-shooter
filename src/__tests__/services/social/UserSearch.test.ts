@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{UserSearch}from"../../services/social/UserSearch";
+describe("UserSearch",()=>{it("ok",()=>expect(new UserSearch()).toBeDefined());it("toggle",()=>{const x=new UserSearch();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new UserSearch();x.set("a",1);expect(x.get("a")).toBe(1);});});
