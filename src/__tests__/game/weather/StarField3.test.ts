@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{StarField3}from"../../game/weather/StarField3";
+describe("StarField3",()=>{it("ok",()=>expect(new StarField3()).toBeDefined());it("toggle",()=>{const x=new StarField3();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new StarField3();x.set("a",1);expect(x.get("a")).toBe(1);});});
