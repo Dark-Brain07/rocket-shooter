@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Banking}from"../../game/economy/Banking";
+describe("Banking",()=>{it("ok",()=>expect(new Banking()).toBeDefined());it("toggle",()=>{const x=new Banking();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Banking();x.set("a",1);expect(x.get("a")).toBe(1);});});
