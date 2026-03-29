@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildRank}from"../../services/guild/GuildRank";
+describe("GuildRank",()=>{it("ok",()=>expect(new GuildRank()).toBeDefined());it("toggle",()=>{const x=new GuildRank();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildRank();x.set("a",1);expect(x.get("a")).toBe(1);});});
