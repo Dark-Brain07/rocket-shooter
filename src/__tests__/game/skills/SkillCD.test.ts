@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillCD}from"../../game/skills/SkillCD";
+describe("SkillCD",()=>{it("ok",()=>expect(new SkillCD()).toBeDefined());it("toggle",()=>{const x=new SkillCD();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillCD();x.set("a",1);expect(x.get("a")).toBe(1);});});
