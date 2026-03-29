@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{PartySystem}from"../../services/social/PartySystem";
+describe("PartySystem",()=>{it("ok",()=>expect(new PartySystem()).toBeDefined());it("toggle",()=>{const x=new PartySystem();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new PartySystem();x.set("a",1);expect(x.get("a")).toBe(1);});});
