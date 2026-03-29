@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleRace}from"../../game/vehicle/VehicleRace";
+describe("VehicleRace",()=>{it("ok",()=>expect(new VehicleRace()).toBeDefined());it("toggle",()=>{const x=new VehicleRace();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleRace();x.set("a",1);expect(x.get("a")).toBe(1);});});
