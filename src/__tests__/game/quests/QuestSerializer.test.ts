@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestSerializer}from"../../game/quests/QuestSerializer";
+describe("QuestSerializer",()=>{it("ok",()=>expect(new QuestSerializer()).toBeDefined());it("toggle",()=>{const x=new QuestSerializer();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestSerializer();x.set("a",1);expect(x.get("a")).toBe(1);});});
