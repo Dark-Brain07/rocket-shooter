@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillUpgrade}from"../../game/skills/SkillUpgrade";
+describe("SkillUpgrade",()=>{it("ok",()=>expect(new SkillUpgrade()).toBeDefined());it("toggle",()=>{const x=new SkillUpgrade();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillUpgrade();x.set("a",1);expect(x.get("a")).toBe(1);});});
