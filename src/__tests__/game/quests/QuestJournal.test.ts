@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestJournal}from"../../game/quests/QuestJournal";
+describe("QuestJournal",()=>{it("ok",()=>expect(new QuestJournal()).toBeDefined());it("toggle",()=>{const x=new QuestJournal();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestJournal();x.set("a",1);expect(x.get("a")).toBe(1);});});
