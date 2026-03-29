@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Active}from"../../game/skills/Active";
+describe("Active",()=>{it("ok",()=>expect(new Active()).toBeDefined());it("toggle",()=>{const x=new Active();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Active();x.set("a",1);expect(x.get("a")).toBe(1);});});
