@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{ThunderStorm}from"../../game/weather/ThunderStorm";
+describe("ThunderStorm",()=>{it("ok",()=>expect(new ThunderStorm()).toBeDefined());it("toggle",()=>{const x=new ThunderStorm();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new ThunderStorm();x.set("a",1);expect(x.get("a")).toBe(1);});});
