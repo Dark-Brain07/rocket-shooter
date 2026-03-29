@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{ShareBtn}from"../../services/social/ShareBtn";
+describe("ShareBtn",()=>{it("ok",()=>expect(new ShareBtn()).toBeDefined());it("toggle",()=>{const x=new ShareBtn();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new ShareBtn();x.set("a",1);expect(x.get("a")).toBe(1);});});
