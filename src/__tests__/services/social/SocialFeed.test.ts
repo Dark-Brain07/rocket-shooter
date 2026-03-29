@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SocialFeed}from"../../services/social/SocialFeed";
+describe("SocialFeed",()=>{it("ok",()=>expect(new SocialFeed()).toBeDefined());it("toggle",()=>{const x=new SocialFeed();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SocialFeed();x.set("a",1);expect(x.get("a")).toBe(1);});});
