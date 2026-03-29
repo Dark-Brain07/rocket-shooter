@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{DungeonDoor}from"../../game/dungeon/DungeonDoor";
+describe("DungeonDoor",()=>{it("ok",()=>expect(new DungeonDoor()).toBeDefined());it("toggle",()=>{const x=new DungeonDoor();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new DungeonDoor();x.set("a",1);expect(x.get("a")).toBe(1);});});
