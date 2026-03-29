@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleCtrl}from"../../game/vehicle/VehicleCtrl";
+describe("VehicleCtrl",()=>{it("ok",()=>expect(new VehicleCtrl()).toBeDefined());it("toggle",()=>{const x=new VehicleCtrl();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleCtrl();x.set("a",1);expect(x.get("a")).toBe(1);});});
