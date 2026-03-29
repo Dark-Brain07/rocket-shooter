@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildPerm}from"../../services/guild/GuildPerm";
+describe("GuildPerm",()=>{it("ok",()=>expect(new GuildPerm()).toBeDefined());it("toggle",()=>{const x=new GuildPerm();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildPerm();x.set("a",1);expect(x.get("a")).toBe(1);});});
