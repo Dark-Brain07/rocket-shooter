@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillCombo}from"../../game/skills/SkillCombo";
+describe("SkillCombo",()=>{it("ok",()=>expect(new SkillCombo()).toBeDefined());it("toggle",()=>{const x=new SkillCombo();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillCombo();x.set("a",1);expect(x.get("a")).toBe(1);});});
