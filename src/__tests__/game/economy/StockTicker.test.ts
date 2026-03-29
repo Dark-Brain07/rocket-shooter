@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{StockTicker}from"../../game/economy/StockTicker";
+describe("StockTicker",()=>{it("ok",()=>expect(new StockTicker()).toBeDefined());it("toggle",()=>{const x=new StockTicker();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new StockTicker();x.set("a",1);expect(x.get("a")).toBe(1);});});
