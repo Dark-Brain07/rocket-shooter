@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleFuel}from"../../game/vehicle/VehicleFuel";
+describe("VehicleFuel",()=>{it("ok",()=>expect(new VehicleFuel()).toBeDefined());it("toggle",()=>{const x=new VehicleFuel();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleFuel();x.set("a",1);expect(x.get("a")).toBe(1);});});
