@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{DungeonTimer}from"../../game/dungeon/DungeonTimer";
+describe("DungeonTimer",()=>{it("ok",()=>expect(new DungeonTimer()).toBeDefined());it("toggle",()=>{const x=new DungeonTimer();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new DungeonTimer();x.set("a",1);expect(x.get("a")).toBe(1);});});
