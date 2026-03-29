@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildLB}from"../../services/guild/GuildLB";
+describe("GuildLB",()=>{it("ok",()=>expect(new GuildLB()).toBeDefined());it("toggle",()=>{const x=new GuildLB();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildLB();x.set("a",1);expect(x.get("a")).toBe(1);});});
