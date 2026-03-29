@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{PetMgr}from"../../game/pets/PetMgr";
+describe("PetMgr",()=>{it("ok",()=>expect(new PetMgr()).toBeDefined());it("toggle",()=>{const x=new PetMgr();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new PetMgr();x.set("a",1);expect(x.get("a")).toBe(1);});});
