@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Tornado}from"../../game/weather/Tornado";
+describe("Tornado",()=>{it("ok",()=>expect(new Tornado()).toBeDefined());it("toggle",()=>{const x=new Tornado();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Tornado();x.set("a",1);expect(x.get("a")).toBe(1);});});
