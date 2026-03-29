@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{FriendList}from"../../services/social/FriendList";
+describe("FriendList",()=>{it("ok",()=>expect(new FriendList()).toBeDefined());it("toggle",()=>{const x=new FriendList();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new FriendList();x.set("a",1);expect(x.get("a")).toBe(1);});});
