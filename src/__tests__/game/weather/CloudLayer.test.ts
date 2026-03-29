@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{CloudLayer}from"../../game/weather/CloudLayer";
+describe("CloudLayer",()=>{it("ok",()=>expect(new CloudLayer()).toBeDefined());it("toggle",()=>{const x=new CloudLayer();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new CloudLayer();x.set("a",1);expect(x.get("a")).toBe(1);});});
