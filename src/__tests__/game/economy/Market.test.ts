@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Market}from"../../game/economy/Market";
+describe("Market",()=>{it("ok",()=>expect(new Market()).toBeDefined());it("toggle",()=>{const x=new Market();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Market();x.set("a",1);expect(x.get("a")).toBe(1);});});
