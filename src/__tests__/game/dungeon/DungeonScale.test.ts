@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{DungeonScale}from"../../game/dungeon/DungeonScale";
+describe("DungeonScale",()=>{it("ok",()=>expect(new DungeonScale()).toBeDefined());it("toggle",()=>{const x=new DungeonScale();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new DungeonScale();x.set("a",1);expect(x.get("a")).toBe(1);});});
