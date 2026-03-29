@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleDmg}from"../../game/vehicle/VehicleDmg";
+describe("VehicleDmg",()=>{it("ok",()=>expect(new VehicleDmg()).toBeDefined());it("toggle",()=>{const x=new VehicleDmg();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleDmg();x.set("a",1);expect(x.get("a")).toBe(1);});});
