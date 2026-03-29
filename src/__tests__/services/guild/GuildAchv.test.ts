@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildAchv}from"../../services/guild/GuildAchv";
+describe("GuildAchv",()=>{it("ok",()=>expect(new GuildAchv()).toBeDefined());it("toggle",()=>{const x=new GuildAchv();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildAchv();x.set("a",1);expect(x.get("a")).toBe(1);});});
