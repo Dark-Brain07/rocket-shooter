@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildDiplomacy}from"../../services/guild/GuildDiplomacy";
+describe("GuildDiplomacy",()=>{it("ok",()=>expect(new GuildDiplomacy()).toBeDefined());it("toggle",()=>{const x=new GuildDiplomacy();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildDiplomacy();x.set("a",1);expect(x.get("a")).toBe(1);});});
