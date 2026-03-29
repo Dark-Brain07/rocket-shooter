@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleHUD}from"../../game/vehicle/VehicleHUD";
+describe("VehicleHUD",()=>{it("ok",()=>expect(new VehicleHUD()).toBeDefined());it("toggle",()=>{const x=new VehicleHUD();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleHUD();x.set("a",1);expect(x.get("a")).toBe(1);});});
