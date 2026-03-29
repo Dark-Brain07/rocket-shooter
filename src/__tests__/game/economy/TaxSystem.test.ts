@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{TaxSystem}from"../../game/economy/TaxSystem";
+describe("TaxSystem",()=>{it("ok",()=>expect(new TaxSystem()).toBeDefined());it("toggle",()=>{const x=new TaxSystem();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new TaxSystem();x.set("a",1);expect(x.get("a")).toBe(1);});});
