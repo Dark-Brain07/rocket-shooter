@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{CraftSFX}from"../../game/crafting/CraftSFX";
+describe("CraftSFX",()=>{it("ok",()=>expect(new CraftSFX()).toBeDefined());it("toggle",()=>{const x=new CraftSFX();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new CraftSFX();x.set("a",1);expect(x.get("a")).toBe(1);});});
