@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestValidator}from"../../game/quests/QuestValidator";
+describe("QuestValidator",()=>{it("ok",()=>expect(new QuestValidator()).toBeDefined());it("toggle",()=>{const x=new QuestValidator();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestValidator();x.set("a",1);expect(x.get("a")).toBe(1);});});
