@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GroupMgr}from"../../services/social/GroupMgr";
+describe("GroupMgr",()=>{it("ok",()=>expect(new GroupMgr()).toBeDefined());it("toggle",()=>{const x=new GroupMgr();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GroupMgr();x.set("a",1);expect(x.get("a")).toBe(1);});});
