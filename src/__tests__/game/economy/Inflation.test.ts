@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Inflation}from"../../game/economy/Inflation";
+describe("Inflation",()=>{it("ok",()=>expect(new Inflation()).toBeDefined());it("toggle",()=>{const x=new Inflation();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Inflation();x.set("a",1);expect(x.get("a")).toBe(1);});});
