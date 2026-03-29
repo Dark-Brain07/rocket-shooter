@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{WeatherManager}from"../../game/weather/WeatherManager";
+describe("WeatherManager",()=>{it("ok",()=>expect(new WeatherManager()).toBeDefined());it("toggle",()=>{const x=new WeatherManager();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new WeatherManager();x.set("a",1);expect(x.get("a")).toBe(1);});});
