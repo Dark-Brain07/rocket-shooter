@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestNotifier}from"../../game/quests/QuestNotifier";
+describe("QuestNotifier",()=>{it("ok",()=>expect(new QuestNotifier()).toBeDefined());it("toggle",()=>{const x=new QuestNotifier();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestNotifier();x.set("a",1);expect(x.get("a")).toBe(1);});});
