@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{AuroraEffect}from"../../game/weather/AuroraEffect";
+describe("AuroraEffect",()=>{it("ok",()=>expect(new AuroraEffect()).toBeDefined());it("toggle",()=>{const x=new AuroraEffect();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new AuroraEffect();x.set("a",1);expect(x.get("a")).toBe(1);});});
