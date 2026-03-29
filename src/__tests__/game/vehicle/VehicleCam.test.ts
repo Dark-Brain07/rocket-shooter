@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleCam}from"../../game/vehicle/VehicleCam";
+describe("VehicleCam",()=>{it("ok",()=>expect(new VehicleCam()).toBeDefined());it("toggle",()=>{const x=new VehicleCam();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleCam();x.set("a",1);expect(x.get("a")).toBe(1);});});
