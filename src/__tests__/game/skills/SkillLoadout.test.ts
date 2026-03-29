@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillLoadout}from"../../game/skills/SkillLoadout";
+describe("SkillLoadout",()=>{it("ok",()=>expect(new SkillLoadout()).toBeDefined());it("toggle",()=>{const x=new SkillLoadout();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillLoadout();x.set("a",1);expect(x.get("a")).toBe(1);});});
