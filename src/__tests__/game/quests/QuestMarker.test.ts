@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestMarker}from"../../game/quests/QuestMarker";
+describe("QuestMarker",()=>{it("ok",()=>expect(new QuestMarker()).toBeDefined());it("toggle",()=>{const x=new QuestMarker();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestMarker();x.set("a",1);expect(x.get("a")).toBe(1);});});
