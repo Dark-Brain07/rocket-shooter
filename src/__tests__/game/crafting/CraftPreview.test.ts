@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{CraftPreview}from"../../game/crafting/CraftPreview";
+describe("CraftPreview",()=>{it("ok",()=>expect(new CraftPreview()).toBeDefined());it("toggle",()=>{const x=new CraftPreview();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new CraftPreview();x.set("a",1);expect(x.get("a")).toBe(1);});});
