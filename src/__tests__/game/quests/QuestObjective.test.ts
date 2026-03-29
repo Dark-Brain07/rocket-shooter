@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestObjective}from"../../game/quests/QuestObjective";
+describe("QuestObjective",()=>{it("ok",()=>expect(new QuestObjective()).toBeDefined());it("toggle",()=>{const x=new QuestObjective();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestObjective();x.set("a",1);expect(x.get("a")).toBe(1);});});
