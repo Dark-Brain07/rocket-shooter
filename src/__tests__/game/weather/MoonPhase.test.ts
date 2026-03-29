@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{MoonPhase}from"../../game/weather/MoonPhase";
+describe("MoonPhase",()=>{it("ok",()=>expect(new MoonPhase()).toBeDefined());it("toggle",()=>{const x=new MoonPhase();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new MoonPhase();x.set("a",1);expect(x.get("a")).toBe(1);});});
