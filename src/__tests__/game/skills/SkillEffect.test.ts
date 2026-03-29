@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillEffect}from"../../game/skills/SkillEffect";
+describe("SkillEffect",()=>{it("ok",()=>expect(new SkillEffect()).toBeDefined());it("toggle",()=>{const x=new SkillEffect();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillEffect();x.set("a",1);expect(x.get("a")).toBe(1);});});
