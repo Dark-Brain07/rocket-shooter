@@ -1,0 +1,2 @@
+[data-theme="t16"]{--bg:#0a0a1a;--fg:#e6edf3;--accent:#6c5ce7;}
+.t16-card{background:var(--bg);border-radius:12px;padding:1rem;}
