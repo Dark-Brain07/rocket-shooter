@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildMgr}from"../../services/guild/GuildMgr";
+describe("GuildMgr",()=>{it("ok",()=>expect(new GuildMgr()).toBeDefined());it("toggle",()=>{const x=new GuildMgr();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildMgr();x.set("a",1);expect(x.get("a")).toBe(1);});});
