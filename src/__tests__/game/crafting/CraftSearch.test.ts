@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{CraftSearch}from"../../game/crafting/CraftSearch";
+describe("CraftSearch",()=>{it("ok",()=>expect(new CraftSearch()).toBeDefined());it("toggle",()=>{const x=new CraftSearch();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new CraftSearch();x.set("a",1);expect(x.get("a")).toBe(1);});});
