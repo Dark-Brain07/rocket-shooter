@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{PetHP}from"../../game/pets/PetHP";
+describe("PetHP",()=>{it("ok",()=>expect(new PetHP()).toBeDefined());it("toggle",()=>{const x=new PetHP();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new PetHP();x.set("a",1);expect(x.get("a")).toBe(1);});});
