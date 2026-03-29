@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SunRays}from"../../game/weather/SunRays";
+describe("SunRays",()=>{it("ok",()=>expect(new SunRays()).toBeDefined());it("toggle",()=>{const x=new SunRays();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SunRays();x.set("a",1);expect(x.get("a")).toBe(1);});});
