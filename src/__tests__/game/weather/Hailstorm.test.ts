@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Hailstorm}from"../../game/weather/Hailstorm";
+describe("Hailstorm",()=>{it("ok",()=>expect(new Hailstorm()).toBeDefined());it("toggle",()=>{const x=new Hailstorm();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Hailstorm();x.set("a",1);expect(x.get("a")).toBe(1);});});
