@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildTerritory}from"../../services/guild/GuildTerritory";
+describe("GuildTerritory",()=>{it("ok",()=>expect(new GuildTerritory()).toBeDefined());it("toggle",()=>{const x=new GuildTerritory();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildTerritory();x.set("a",1);expect(x.get("a")).toBe(1);});});
