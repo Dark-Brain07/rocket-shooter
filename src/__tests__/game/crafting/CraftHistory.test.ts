@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{CraftHistory}from"../../game/crafting/CraftHistory";
+describe("CraftHistory",()=>{it("ok",()=>expect(new CraftHistory()).toBeDefined());it("toggle",()=>{const x=new CraftHistory();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new CraftHistory();x.set("a",1);expect(x.get("a")).toBe(1);});});
