@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillReset}from"../../game/skills/SkillReset";
+describe("SkillReset",()=>{it("ok",()=>expect(new SkillReset()).toBeDefined());it("toggle",()=>{const x=new SkillReset();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillReset();x.set("a",1);expect(x.get("a")).toBe(1);});});
