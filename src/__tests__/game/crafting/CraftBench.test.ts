@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{CraftBench}from"../../game/crafting/CraftBench";
+describe("CraftBench",()=>{it("ok",()=>expect(new CraftBench()).toBeDefined());it("toggle",()=>{const x=new CraftBench();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new CraftBench();x.set("a",1);expect(x.get("a")).toBe(1);});});
