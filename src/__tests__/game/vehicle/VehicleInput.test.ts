@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleInput}from"../../game/vehicle/VehicleInput";
+describe("VehicleInput",()=>{it("ok",()=>expect(new VehicleInput()).toBeDefined());it("toggle",()=>{const x=new VehicleInput();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleInput();x.set("a",1);expect(x.get("a")).toBe(1);});});
