@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{BlockList}from"../../services/social/BlockList";
+describe("BlockList",()=>{it("ok",()=>expect(new BlockList()).toBeDefined());it("toggle",()=>{const x=new BlockList();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new BlockList();x.set("a",1);expect(x.get("a")).toBe(1);});});
