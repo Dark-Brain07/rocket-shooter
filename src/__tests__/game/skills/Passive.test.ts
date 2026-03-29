@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Passive}from"../../game/skills/Passive";
+describe("Passive",()=>{it("ok",()=>expect(new Passive()).toBeDefined());it("toggle",()=>{const x=new Passive();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Passive();x.set("a",1);expect(x.get("a")).toBe(1);});});
