@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{PetEvo}from"../../game/pets/PetEvo";
+describe("PetEvo",()=>{it("ok",()=>expect(new PetEvo()).toBeDefined());it("toggle",()=>{const x=new PetEvo();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new PetEvo();x.set("a",1);expect(x.get("a")).toBe(1);});});
