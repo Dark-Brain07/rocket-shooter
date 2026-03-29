@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{DungeonTheme}from"../../game/dungeon/DungeonTheme";
+describe("DungeonTheme",()=>{it("ok",()=>expect(new DungeonTheme()).toBeDefined());it("toggle",()=>{const x=new DungeonTheme();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new DungeonTheme();x.set("a",1);expect(x.get("a")).toBe(1);});});
