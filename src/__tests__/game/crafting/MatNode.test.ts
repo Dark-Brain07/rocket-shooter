@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{MatNode}from"../../game/crafting/MatNode";
+describe("MatNode",()=>{it("ok",()=>expect(new MatNode()).toBeDefined());it("toggle",()=>{const x=new MatNode();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new MatNode();x.set("a",1);expect(x.get("a")).toBe(1);});});
