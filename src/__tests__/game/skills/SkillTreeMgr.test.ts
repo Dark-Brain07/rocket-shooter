@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillTreeMgr}from"../../game/skills/SkillTreeMgr";
+describe("SkillTreeMgr",()=>{it("ok",()=>expect(new SkillTreeMgr()).toBeDefined());it("toggle",()=>{const x=new SkillTreeMgr();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillTreeMgr();x.set("a",1);expect(x.get("a")).toBe(1);});});
