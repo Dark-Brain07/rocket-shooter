@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{OnlineStatus}from"../../services/social/OnlineStatus";
+describe("OnlineStatus",()=>{it("ok",()=>expect(new OnlineStatus()).toBeDefined());it("toggle",()=>{const x=new OnlineStatus();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new OnlineStatus();x.set("a",1);expect(x.get("a")).toBe(1);});});
