@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Referral}from"../../services/social/Referral";
+describe("Referral",()=>{it("ok",()=>expect(new Referral()).toBeDefined());it("toggle",()=>{const x=new Referral();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Referral();x.set("a",1);expect(x.get("a")).toBe(1);});});
