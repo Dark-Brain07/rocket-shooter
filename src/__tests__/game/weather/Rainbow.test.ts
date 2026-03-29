@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Rainbow}from"../../game/weather/Rainbow";
+describe("Rainbow",()=>{it("ok",()=>expect(new Rainbow()).toBeDefined());it("toggle",()=>{const x=new Rainbow();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Rainbow();x.set("a",1);expect(x.get("a")).toBe(1);});});
