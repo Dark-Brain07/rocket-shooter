@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildBank}from"../../services/guild/GuildBank";
+describe("GuildBank",()=>{it("ok",()=>expect(new GuildBank()).toBeDefined());it("toggle",()=>{const x=new GuildBank();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildBank();x.set("a",1);expect(x.get("a")).toBe(1);});});
