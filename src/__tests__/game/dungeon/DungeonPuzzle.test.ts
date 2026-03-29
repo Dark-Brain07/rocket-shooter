@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{DungeonPuzzle}from"../../game/dungeon/DungeonPuzzle";
+describe("DungeonPuzzle",()=>{it("ok",()=>expect(new DungeonPuzzle()).toBeDefined());it("toggle",()=>{const x=new DungeonPuzzle();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new DungeonPuzzle();x.set("a",1);expect(x.get("a")).toBe(1);});});
