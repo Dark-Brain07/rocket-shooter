@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleVFX}from"../../game/vehicle/VehicleVFX";
+describe("VehicleVFX",()=>{it("ok",()=>expect(new VehicleVFX()).toBeDefined());it("toggle",()=>{const x=new VehicleVFX();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleVFX();x.set("a",1);expect(x.get("a")).toBe(1);});});
