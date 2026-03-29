@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillNode}from"../../game/skills/SkillNode";
+describe("SkillNode",()=>{it("ok",()=>expect(new SkillNode()).toBeDefined());it("toggle",()=>{const x=new SkillNode();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillNode();x.set("a",1);expect(x.get("a")).toBe(1);});});
