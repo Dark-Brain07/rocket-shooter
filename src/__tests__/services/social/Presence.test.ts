@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Presence}from"../../services/social/Presence";
+describe("Presence",()=>{it("ok",()=>expect(new Presence()).toBeDefined());it("toggle",()=>{const x=new Presence();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Presence();x.set("a",1);expect(x.get("a")).toBe(1);});});
