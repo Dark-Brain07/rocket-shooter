@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{CraftFilter}from"../../game/crafting/CraftFilter";
+describe("CraftFilter",()=>{it("ok",()=>expect(new CraftFilter()).toBeDefined());it("toggle",()=>{const x=new CraftFilter();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new CraftFilter();x.set("a",1);expect(x.get("a")).toBe(1);});});
