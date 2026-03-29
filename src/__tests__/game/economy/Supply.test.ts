@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Supply}from"../../game/economy/Supply";
+describe("Supply",()=>{it("ok",()=>expect(new Supply()).toBeDefined());it("toggle",()=>{const x=new Supply();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Supply();x.set("a",1);expect(x.get("a")).toBe(1);});});
