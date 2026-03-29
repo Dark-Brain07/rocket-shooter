@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{PriceHistory}from"../../game/economy/PriceHistory";
+describe("PriceHistory",()=>{it("ok",()=>expect(new PriceHistory()).toBeDefined());it("toggle",()=>{const x=new PriceHistory();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new PriceHistory();x.set("a",1);expect(x.get("a")).toBe(1);});});
