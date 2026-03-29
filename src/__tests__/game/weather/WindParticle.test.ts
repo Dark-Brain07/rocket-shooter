@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{WindParticle}from"../../game/weather/WindParticle";
+describe("WindParticle",()=>{it("ok",()=>expect(new WindParticle()).toBeDefined());it("toggle",()=>{const x=new WindParticle();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new WindParticle();x.set("a",1);expect(x.get("a")).toBe(1);});});
