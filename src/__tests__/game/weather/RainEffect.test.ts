@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{RainEffect}from"../../game/weather/RainEffect";
+describe("RainEffect",()=>{it("ok",()=>expect(new RainEffect()).toBeDefined());it("toggle",()=>{const x=new RainEffect();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new RainEffect();x.set("a",1);expect(x.get("a")).toBe(1);});});
