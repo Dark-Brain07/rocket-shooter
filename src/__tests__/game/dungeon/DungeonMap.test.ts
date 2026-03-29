@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{DungeonMap}from"../../game/dungeon/DungeonMap";
+describe("DungeonMap",()=>{it("ok",()=>expect(new DungeonMap()).toBeDefined());it("toggle",()=>{const x=new DungeonMap();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new DungeonMap();x.set("a",1);expect(x.get("a")).toBe(1);});});
