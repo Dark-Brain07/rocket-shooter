@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{EconBalance}from"../../game/economy/EconBalance";
+describe("EconBalance",()=>{it("ok",()=>expect(new EconBalance()).toBeDefined());it("toggle",()=>{const x=new EconBalance();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new EconBalance();x.set("a",1);expect(x.get("a")).toBe(1);});});
