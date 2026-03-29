@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{DungeonFog}from"../../game/dungeon/DungeonFog";
+describe("DungeonFog",()=>{it("ok",()=>expect(new DungeonFog()).toBeDefined());it("toggle",()=>{const x=new DungeonFog();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new DungeonFog();x.set("a",1);expect(x.get("a")).toBe(1);});});
