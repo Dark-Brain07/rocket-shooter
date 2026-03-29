@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildChat}from"../../services/guild/GuildChat";
+describe("GuildChat",()=>{it("ok",()=>expect(new GuildChat()).toBeDefined());it("toggle",()=>{const x=new GuildChat();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildChat();x.set("a",1);expect(x.get("a")).toBe(1);});});
