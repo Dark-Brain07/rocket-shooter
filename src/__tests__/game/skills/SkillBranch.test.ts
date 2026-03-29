@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{SkillBranch}from"../../game/skills/SkillBranch";
+describe("SkillBranch",()=>{it("ok",()=>expect(new SkillBranch()).toBeDefined());it("toggle",()=>{const x=new SkillBranch();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new SkillBranch();x.set("a",1);expect(x.get("a")).toBe(1);});});
