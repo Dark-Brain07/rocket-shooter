@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleUpgrade}from"../../game/vehicle/VehicleUpgrade";
+describe("VehicleUpgrade",()=>{it("ok",()=>expect(new VehicleUpgrade()).toBeDefined());it("toggle",()=>{const x=new VehicleUpgrade();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleUpgrade();x.set("a",1);expect(x.get("a")).toBe(1);});});
