@@ -1,0 +1,1 @@
+export class StarField3{private s=new Map();private on=true;enable(){this.on=true;}disable(){this.on=false;}isActive(){return this.on;}get(k){return this.s.get(k);}set(k,v){this.s.set(k,v);}reset(){this.s.clear();this.on=true;}dispose(){this.s.clear();this.on=false;}}
