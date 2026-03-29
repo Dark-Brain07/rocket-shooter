@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehicleGarage}from"../../game/vehicle/VehicleGarage";
+describe("VehicleGarage",()=>{it("ok",()=>expect(new VehicleGarage()).toBeDefined());it("toggle",()=>{const x=new VehicleGarage();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehicleGarage();x.set("a",1);expect(x.get("a")).toBe(1);});});
