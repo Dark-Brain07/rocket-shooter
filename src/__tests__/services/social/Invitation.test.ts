@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Invitation}from"../../services/social/Invitation";
+describe("Invitation",()=>{it("ok",()=>expect(new Invitation()).toBeDefined());it("toggle",()=>{const x=new Invitation();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Invitation();x.set("a",1);expect(x.get("a")).toBe(1);});});
