@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestManager}from"../../game/quests/QuestManager";
+describe("QuestManager",()=>{it("ok",()=>expect(new QuestManager()).toBeDefined());it("toggle",()=>{const x=new QuestManager();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestManager();x.set("a",1);expect(x.get("a")).toBe(1);});});
