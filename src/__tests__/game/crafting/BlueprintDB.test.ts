@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{BlueprintDB}from"../../game/crafting/BlueprintDB";
+describe("BlueprintDB",()=>{it("ok",()=>expect(new BlueprintDB()).toBeDefined());it("toggle",()=>{const x=new BlueprintDB();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new BlueprintDB();x.set("a",1);expect(x.get("a")).toBe(1);});});
