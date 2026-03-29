@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{Ultimate}from"../../game/skills/Ultimate";
+describe("Ultimate",()=>{it("ok",()=>expect(new Ultimate()).toBeDefined());it("toggle",()=>{const x=new Ultimate();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new Ultimate();x.set("a",1);expect(x.get("a")).toBe(1);});});
