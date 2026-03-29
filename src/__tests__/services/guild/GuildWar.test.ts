@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{GuildWar}from"../../services/guild/GuildWar";
+describe("GuildWar",()=>{it("ok",()=>expect(new GuildWar()).toBeDefined());it("toggle",()=>{const x=new GuildWar();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new GuildWar();x.set("a",1);expect(x.get("a")).toBe(1);});});
