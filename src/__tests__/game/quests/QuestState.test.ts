@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{QuestState}from"../../game/quests/QuestState";
+describe("QuestState",()=>{it("ok",()=>expect(new QuestState()).toBeDefined());it("toggle",()=>{const x=new QuestState();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new QuestState();x.set("a",1);expect(x.get("a")).toBe(1);});});
