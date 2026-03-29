@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{VehiclePhys}from"../../game/vehicle/VehiclePhys";
+describe("VehiclePhys",()=>{it("ok",()=>expect(new VehiclePhys()).toBeDefined());it("toggle",()=>{const x=new VehiclePhys();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new VehiclePhys();x.set("a",1);expect(x.get("a")).toBe(1);});});
