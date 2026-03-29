@@ -1,0 +1,2 @@
+import{describe,it,expect}from"vitest";import{LoanSystem}from"../../game/economy/LoanSystem";
+describe("LoanSystem",()=>{it("ok",()=>expect(new LoanSystem()).toBeDefined());it("toggle",()=>{const x=new LoanSystem();x.disable();expect(x.isActive()).toBe(false);});it("data",()=>{const x=new LoanSystem();x.set("a",1);expect(x.get("a")).toBe(1);});});
