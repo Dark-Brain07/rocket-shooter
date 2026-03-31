@@ -1,4 +1,4 @@
-# Design Session 312
-Notes taken during run 1912.
+# Design Session 382
+Notes taken during run 1982.
 - Action taken
 - Observations in game tests
